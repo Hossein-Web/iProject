@@ -20,6 +20,7 @@ Table of content
 -blog
 -services card
 -podcast
+-content encyclopedia
 -Media queries
 */
 
@@ -670,6 +671,7 @@ i{
 
 /*--------------------------------- podcast -------------------------------------*/
 .podcast{
+	margin-bottom: 605px;
 	&__container{
 		 display: flex;
 		 align-items: center;
@@ -756,6 +758,38 @@ i{
 					bottom: 0;
 					z-index: 1000;
 				}
+			}
+		}
+	}
+}
+
+/*--------------------------------- content encyclopedia -------------------------------------*/
+.content_encyclopedia{
+	margin-bottom: 217px;
+	&__item_wrapper{
+		&:not(:last-child){
+			margin-bottom: 50px;
+		}
+		h4, h5{
+			color: #333333;
+			margin-bottom: 50px;
+			font-weight: 700;
+		}
+		h4{
+			font-size: 24px;
+		}
+		h5{
+			font-size: 18px;
+		}
+		.item_description{
+			font-weight: 400;
+		}
+		.wiki_link{
+			color: $accent_color;
+			transition: all 100ms;
+			font-weight: 400;
+			&:hover{
+				font-weight: 700;
 			}
 		}
 	}
