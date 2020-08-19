@@ -19,6 +19,7 @@ Table of content
 -faq
 -blog
 -customers
+-Videos
 -services card
 -podcast
 -content encyclopedia
@@ -800,6 +801,114 @@ padding-right: 8px;
 border-radius: 5px;
 }
 
+//------------- Videos -------------
+.videos{
+    margin-bottom: 119px;
+    &__wrapper{
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            height: 1px;
+            background-color: #f0f1f7 ;
+            top: 45px;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+    }
+    &__title{
+        margin-bottom: 49px;
+        h4{
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 35px;
+            padding-bottom: 11px;
+            display: inline-block;
+            background-color: $background_color;
+        }
+        p{
+            font-size: 24px;
+            line-height: 35px;
+        }
+    }
+    .item{
+        text-align: center;
+        position: relative;
+        box-shadow: 0 15px 70px rgba(56, 66, 77, 0.04);
+        border-radius: 8px;
+        background-color: white;
+        padding: 34px 30px;
+        img{
+            margin-bottom: 33px;
+        }
+        p{
+            font-size: 24px;
+            font-weight: 700;
+        }
+        a{
+            opacity: 0;
+            display: inline-block;
+            position: absolute;
+            top: 20%;
+            right: 50%;
+            transform: translatex(50%);
+            border-radius: 50%;
+            background-color: $accent_color;
+            transition: opacity 300ms;
+            padding: 25px;
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                border: 1px solid $accent_color;
+                border-radius: 50%;
+                top: 0;
+                right: 0;
+                opacity: 0.35;
+                width: 100%;
+                height: 100%;
+            }
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                border: 1px solid $accent_color;
+                border-radius: 50%;
+                opacity: 0.15;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &:hover{
+            a{              
+                opacity: 1;
+                i{
+                    background-color: white;
+                }  
+                &::before{
+                    animation: wave 2s ease-in 1s infinite;
+                }   
+                &::after{
+                    animation: wave2 3s ease-in infinite;
+                }                 
+            }
+        }
+    }
+    .swiper-pagination{
+        top: 43px;
+        bottom: unset;
+        text-align: left;
+        position: absolute;
+        display: inline-block;
+        width: auto;
+        background-color: $background_color;
+        padding-right: 13px;
+    }
+}
+
 /*--------------------------------- services card -------------------------------------*/
 .services_card{
 	margin-bottom: 162px;
@@ -1193,6 +1302,35 @@ border-radius: 5px;
 		padding-right: unset;
 	}
 }
+//Videos
+.videos{
+	padding-left: 20px;
+	padding-right: 20px;
+	&__wrapper{
+		&::after{
+			content: '';
+			display: none;
+		}
+	}  
+	&__title{
+		margin-bottom: 30px;
+		h4{
+			display: block;
+			background-color:unset;
+			padding-bottom: 12px;      
+		}
+	}
+	.swiper-pagination{
+		// top: 20px;
+		// bottom: unset;
+		text-align: left;
+		position: static;
+		margin-bottom: 30px;
+		display: block;
+		background-color: unset;
+		padding-right: unset;
+	}
+	}
 
 	// podcast
 	.podcast{
@@ -1244,3 +1382,35 @@ border-radius: 5px;
 		margin-right: 10px;
 	}
 }
+
+
+@keyframes wave {
+	0% {
+	  -webkit-transform: scale(1);
+	  transform: scale(1);
+	}
+	50% {
+	  -webkit-transform: scale(1.5);
+	  transform: scale(1.5);
+	}
+	100% {
+	  opacity: 0;
+	  -webkit-transform: scale(1.7);
+	  transform: scale(1.7);
+	}
+  }
+  @keyframes wave2 {
+	0% {
+	  -webkit-transform: scale(1);
+	  transform: scale(1);
+	}
+	50% {
+	  -webkit-transform: scale(1.5);
+	  transform: scale(1.5);
+	}
+	100% {
+	  opacity: 0;
+	  -webkit-transform: scale(1.7);
+	  transform: scale(1.7);
+	}
+  }
