@@ -23,6 +23,7 @@ Table of content
 -services card
 -podcast
 -content encyclopedia
+-Portal
 -Media queries
 */
 
@@ -1078,6 +1079,74 @@ border-radius: 5px;
 	}
 }
 
+//------------- Portal -------------
+.portal{
+    background-color: $accent_color;
+    padding-top: 54px;
+    padding-bottom: 26px;
+    margin-bottom: 197px;
+    &__wrapper{
+        display: flex;
+        .img{
+            flex: 0 0 auto;
+            margin-top: -158px;
+            margin-bottom: -165px;
+        }
+        .content{
+            position: relative;
+            padding: 0px 55px 0px 0px;
+            color: white;
+            background-color: $accent_color;
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 100%;
+                background-color: $accent_color;
+                width: 100%;
+                height: 100%;
+            }
+            .title{          
+                h4{
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-bottom: 40px;
+                }           
+            }
+            p{
+                font-size: 20px;
+                line-height: 40px;
+                padding-bottom: 55px;
+            }
+            .portal_link{
+                text-align: left;
+                line-height: 40px;
+                font-weight: 700;
+                position: relative;
+                padding-bottom: 25px;
+                a{
+                    font-size: 24px;
+                    margin-bottom: 5px;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        height: 3px;
+                        width: 100%;
+                        background-color: white;
+                        bottom: -4px;
+                        left: 0;
+                        transform: rotate(-2deg);
+                    }
+                }
+            }
+        }
+  }
+}
+
 //Media queries
 
 //---------------------- > 1200px ----------------------
@@ -1158,6 +1227,17 @@ border-radius: 5px;
 		&__content{
 			margin-right: 0;
 		}
+		}
+//Portal
+		.portal__wrapper{
+			flex-direction: column;
+			align-items: center;
+			.img{
+				margin-bottom: 20px;
+			}
+			.content{
+				padding: 0;
+			}
 		}
 }
 
