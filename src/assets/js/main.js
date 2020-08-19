@@ -69,6 +69,31 @@ var categories_description_list = new Swiper('.categories_description_list', {
 	  }
   });
 
+  //portfolio swiper
+var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
+	slidesPerView: 1,
+	spaceBetween: 35,
+	pagination: {
+	  el: '.swiper-pagination',
+	  clickable: true,
+	},
+	breakpoints: {
+		// when window width is >= 320px
+		768: {
+		  slidesPerView: 4,
+		  spaceBetween: 35
+		},
+		576: {
+			slidesPerView: 3,
+			spaceBetween: 35
+		  },
+		  320: {
+			slidesPerView: 2,
+			spaceBetween: 35
+		  },		
+	  }
+  });
+  
 // faq section
   var coll = document.getElementsByClassName("faq__collapsible");
   var i;
