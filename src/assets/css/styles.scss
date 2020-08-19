@@ -608,7 +608,19 @@ i{
         &__content{
             padding-right: 20px;
                }
+	}
+//Services Section
+.services{
+    &__introduction{
+        padding: 0;
+        margin-bottom: 50px;
     }
+    &__list{
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
 }
 
 //---------------------- < 768px ----------------------
@@ -639,6 +651,15 @@ i{
 			}
 			.content{
 				margin-left: 50px;
+			}
+		}
+//Services Section
+		.services{
+			padding-left: 20px;
+			padding-right: 20px;
+			&__list__item{
+				padding-right: 10px;
+				padding-left: 10px;
 			}
 		}
 	 
