@@ -15,6 +15,7 @@ Table of content
 -your position
 -Select team
 -Services
+-Ivahid_difference
 -faq
 -blog
 -Media queries
@@ -431,6 +432,26 @@ i{
 		}
 	}
 	}
+
+//------------- Ivahid_difference -------------
+.ivahid_difference{
+    margin-bottom: 240px;
+    &__content{
+        padding-right: 45px;
+        .title{
+            margin-bottom: 35px;
+            h4{
+                font-weight: 700;
+                font-size: 24px;
+                margin-bottom: 10px;
+                span{
+                    color: $accent_color;
+                }
+            }
+        }
+    }
+    
+}
 	
 /*--------------------------------- Faq -------------------------------------*/
 .faq{
@@ -722,6 +743,15 @@ i{
 				margin-left: 100px;
 			}
 		}
+//Ivahid_difference Section
+		.ivahid_difference{
+			&__img{
+				margin-bottom: 50px;
+			}
+			&__content{
+				padding-right: 0;
+			}
+		} 
 		}
 
 		
@@ -742,6 +772,11 @@ i{
 			.content{
 				margin-left: 50px;
 			}
+		}
+//Ivahid_difference Section
+		.ivahid_difference{
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 	 
 		}
