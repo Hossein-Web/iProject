@@ -16,6 +16,7 @@ Table of content
 -Select team
 -Services
 -faq
+-blog
 -Media queries
 */
 
@@ -500,6 +501,107 @@ i{
 		  margin-bottom: 110px;
 	  }
 }
+
+/*--------------------------------- Blog -------------------------------------*/
+.blog{
+	padding-top: 109px;
+	&__posts{
+		padding-bottom: 92px;
+		&::after{
+            content: '';
+            display: block;
+            position: absolute;
+            height: 1px;
+            background-color: #f0f1f7 ;
+            top: 47px;
+            left: 0;
+            right: 0;
+			width: 100%;
+			z-index: -1;
+		}
+		.title{
+			margin-bottom: -7px;
+			color: $text_color;
+        h4{
+            font-size: 30px;
+            display: inline-block;
+            background-color: $background_color;
+            padding-bottom: 21px;
+			position: relative;
+			margin-bottom: 0;
+        }
+		}
+		.post_wrapper{
+			padding: 35px 30px 50px 30px;
+			background-color: white;
+			&:hover, &:focus{
+				.read_more_wrapper{
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+			.post_img_wrapper{
+				a{
+					display: block;
+				}
+				text-align: center;
+				margin-bottom: 30px;
+			}
+			.post_title{
+				display: block;
+				font-size: 24px;
+				font-weight: 700;
+				line-height: 35px;
+				color: $text_color;
+				text-align: right;
+				margin-bottom: 30px;
+				padding-bottom: 30px;
+				border-bottom: 1px solid #f0f1f7;
+			}
+			.post_excerpt{
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 40px;
+				color: $text_color;
+			}
+			.read_more_wrapper{
+					text-align: left;
+					margin-bottom: -69px;
+				a{
+					font-size: 18px;
+					font-weight: 700;
+					line-height: 20.74px;
+					box-shadow: 0 15px 70px rgba(46, 197, 192, 0.13);
+					border-radius: 4px;
+					background-color: $button_color;
+					color: white;
+					padding: 12px 22px;
+					display: inline-block;
+				}
+				transition: all 250ms ease-in-out;
+				visibility: hidden;
+				opacity: 0;
+			}
+		}
+		.swiper-pagination{
+				top: 33px;
+				bottom: unset;
+				text-align: left;
+				position: absolute;
+				display: inline-block;
+				width: auto;
+				background-color: $background_color;
+				padding-right: 13px;
+			.swiper-pagination-bullet-active{
+				background-color: $accent_color;
+				padding-left: 8px;
+				padding-right: 8px;
+				border-radius: 5px;
+			}
+		}
+	}
+}
+
 //Media queries
 
 //---------------------- > 1200px ----------------------
