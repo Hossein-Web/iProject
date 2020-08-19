@@ -113,3 +113,59 @@ var categories_description_list = new Swiper('.categories_description_list', {
 		}
 	  }
   });
+
+    // 'podcast' section audio player
+	var progress_percent = 0;
+	var formatTime = function (time) {
+		return [
+			Math.floor((time % 3600) / 60), // minutes
+			('00' + Math.floor(time % 60)).slice(-2) // seconds
+		].join(':');
+	};
+	
+	const circle = document.querySelector('.progress-ring__circle');
+	const radius = circle.r.baseVal.value;
+	var circumference = radius * 2 * Math.PI;
+	circle.style.strokeDasharray = `${circumference} ${circumference}`;
+	circle.style.strokeDashoffset = `${circumference}`;
+	function setProgress(percent) {
+		const offset = circumference - percent / 100 * circumference;
+		circle.style.strokeDashoffset = offset;
+	  }
+	
+	  var wavesurfer = WaveSurfer.create({
+		container: '#waveform',
+		mediaType: 'audio',
+		waveColor: '#f0f1f7',
+		barWidth: 3,
+		cursorColor: 'transparent',
+		progressColor: '#ff4342',
+		barGap: 4,
+		responsive: true,
+		height: 66
+	});
+	wavesurfer.load('./assets/audio/test.mp3');
+	
+	wavesurfer.on('ready', function () {
+		$( '.duration' ).html( formatTime( wavesurfer.getDuration() ) );
+		$( '.podcast_button' ).on( 'click', function(){
+			if( $( this ).hasClass( 'paused' ) ) {
+				$(this).removeClass( 'paused' );
+				$(this).addClass( 'playing' );
+				wavesurfer.play();
+			}else{
+				$(this).removeClass( 'playing' );
+				$(this).addClass( 'paused' );
+				wavesurfer.pause();
+			}
+		} );
+	});
+	
+	
+	wavesurfer.on( 'audioprocess', function() {
+		progress_percent = wavesurfer.getCurrentTime()*100/wavesurfer.getDuration();
+		$( '.current_time' ).html( formatTime( wavesurfer.getCurrentTime() ) );
+		setProgress( progress_percent );
+		console.log( progress_percent );
+	} );
+	

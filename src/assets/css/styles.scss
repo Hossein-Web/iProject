@@ -19,6 +19,7 @@ Table of content
 -faq
 -blog
 -services card
+-podcast
 -Media queries
 */
 
@@ -667,6 +668,99 @@ i{
 
 }
 
+/*--------------------------------- podcast -------------------------------------*/
+.podcast{
+	&__container{
+		 display: flex;
+		 align-items: center;
+		 padding: 42px 40px 33px 32px;
+		 background-color: white;
+		.podcast_img_wrapper{
+			margin-left: 33px;
+			img{
+				border-radius: 3px;
+			}
+		}
+		.podcast_wrapper{
+			flex: 1 1 auto;
+			.podcast_details{
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 21px;	
+				.podcast_title{
+					h4{
+						font-size: 24px;
+						font-weight: 700;
+						line-height: 35px;
+						color: #333333;
+					}
+					span{
+						font-size: 18px;
+						font-weight: 400;
+						line-height: 35px;
+						color: $text_color;
+					}
+				}
+				.podcast_button{
+					svg{
+						height: 70px;
+						width: 70px;
+					}
+					position: relative;
+					padding: 0;
+					i{
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate( -50%, -50% );
+					}
+					&.playing{
+					}
+					&.paused{
+					}
+					display: block;
+					width: 70px;
+					height: 70px;
+					border-radius: 70px;
+					background-color: #f0f1f7;
+				}
+			}
+		}
+		.waveform_wrapper{
+			display: flex;
+			flex: 1 0 auto;
+			margin-bottom: -33px;
+			.duration, .current_time{
+				padding-top: 11px;
+				color: $text_color;
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 35px;
+			}
+			.duration{
+				margin-left: 18px;
+			}
+			.current_time{
+				margin-right: 18px;
+			}
+			#waveform{
+				position: relative;
+				flex: 1 0 auto;
+				&::after{
+					content: '';
+					display: block;
+					position: absolute;
+					width: 100%;
+					height: 50%;
+					background-color: $background_color;
+					bottom: 0;
+					z-index: 1000;
+				}
+			}
+		}
+	}
+}
+
 //Media queries
 
 //---------------------- > 1200px ----------------------
@@ -781,47 +875,98 @@ i{
 //---------------------- < 768px ----------------------
 @media only screen and( max-width: 768px ){
 	//Select_team Section
-		.select_team__img__lable{
-			height: 80px;
-			.content{
-				margin-left: 100px;
+	.select_team__img__lable{
+		height: 80px;
+		.content{
+			margin-left: 100px;
+		}
+	}
+	//Ivahid_difference Section
+	.ivahid_difference{
+		&__img{
+			margin-bottom: 50px;
+		}
+		&__content{
+			padding-right: 0;
+		}
+	} 
+
+	// podcast
+	.podcast{
+		&__container{
+			flex-wrap: wrap;
+			justify-content: center;
+			.podcast_img_wrapper{
+				margin-bottom: 20px;
 			}
 		}
-//Ivahid_difference Section
-		.ivahid_difference{
-			&__img{
-				margin-bottom: 50px;
-			}
-			&__content{
-				padding-right: 0;
-			}
-		} 
+	}
 		}
 
 		
 //---------------------- < 576px ----------------------
 @media only screen and( max-width: 576px ){
 	//Select_team Section
-		.select_team__img__lable{
-			height: 70px;
-			right: 20px;
-			bottom: 10px;
-			.icon{
-				height: 60px;
-				width: 60px;
-				i{
-					margin: 20px auto;
+	.select_team__img__lable{
+		height: 70px;
+		right: 20px;
+		bottom: 10px;
+		.icon{
+			height: 60px;
+			width: 60px;
+			i{
+				margin: 20px auto;
+			}
+		}
+		.content{
+			margin-left: 50px;
+		}
+	}
+	//Ivahid_difference Section
+	.ivahid_difference{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	// podcast
+	.podcast{
+		&__container{
+			padding-left: 10px;
+			padding-right: 10px;
+			.podcast_wrapper{
+				.podcast_details{
+					flex-wrap: wrap;
+					.podcast_title{
+						h4{
+							font-size: 18px !important;
+						}
+						span{
+							font-size: 16px !important;
+						}
+					}
+					.podcast_button{
+						width: 36px;
+						height: 36px;
+						border-radius: 36px;
+						margin-top: 10px;
+						svg{
+							height: 36px;
+							width: 36px;
+							circle{
+								r: 18px;
+								cx: 18px;
+								cy: 18px;
+							}
+						}
+					}
+				}
+				.waveform_wrapper{
+					.duration, .current_time{
+						font-size: 15px;
+					}
 				}
 			}
-			.content{
-				margin-left: 50px;
-			}
 		}
-//Ivahid_difference Section
-		.ivahid_difference{
-			padding-left: 20px;
-			padding-right: 20px;
-		}
+	}
 	 
 		}
 
