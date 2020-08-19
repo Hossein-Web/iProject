@@ -93,7 +93,31 @@ var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 		  },		
 	  }
   });
-  
+
+//customers swiper
+   var swiper = new Swiper('.customers__wrapper > .swiper-container', {
+	slidesPerView: 1,
+	spaceBetween: 35,
+	pagination: {
+	  el: '.swiper-pagination',
+	  clickable: true,
+	},
+	breakpoints: {
+		768: {
+		  slidesPerView: 4,
+		  spaceBetween: 13
+		},
+		576: {
+			slidesPerView: 3,
+			spaceBetween: 13
+		  },
+		  320: {
+			slidesPerView: 2,
+			spaceBetween: 13
+		  },		
+	  }
+  });
+
 // faq section
   var coll = document.getElementsByClassName("faq__collapsible");
   var i;

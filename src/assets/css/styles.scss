@@ -18,6 +18,7 @@ Table of content
 -Ivahid_difference
 -faq
 -blog
+-customers
 -services card
 -podcast
 -Media queries
@@ -749,6 +750,55 @@ i{
 	}
 }
 
+//------------- Customers -------------
+.customers{
+    margin-bottom: 154px;
+    &__wrapper{
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            height: 1px;
+            background-color: #f0f1f7 ;
+            top: 47px;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        .swiper-slide{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    }
+    &__title{
+      margin-bottom: -7px;
+        h4{
+            font-size: 30px;
+            display: inline-block;
+            background-color: $background_color;
+            padding-bottom: 12px;
+            position: relative;
+        }
+    }
+    .swiper-pagination{
+        top: 43px;
+        bottom: unset;
+        text-align: left;
+        position: absolute;
+        display: inline-block;
+        width: auto;
+        background-color: $background_color;
+        padding-right: 13px;
+    }
+}
+.swiper-pagination-bullet-active{
+background-color: $accent_color;
+padding-left: 8px;
+padding-right: 8px;
+border-radius: 5px;
+}
+
 /*--------------------------------- services card -------------------------------------*/
 .services_card{
 	margin-bottom: 162px;
@@ -1078,7 +1128,38 @@ i{
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+
 	
+//Customers
+.customers{
+	padding-left: 20px;
+	padding-right: 20px;
+	&__wrapper{
+		&::after{
+			content: '';
+			display: none;
+		}
+	}  
+	&__title{
+		margin-bottom: 30px;
+		h4{
+			display: block;
+			background-color:unset;
+			padding-bottom: 12px;      
+		}
+	}
+	.swiper-pagination{
+		// top: 20px;
+		// bottom: unset;
+		text-align: left;
+		position: static;
+		margin-bottom: 30px;
+		display: block;
+		background-color: unset;
+		padding-right: unset;
+	}
+}
+
 	// podcast
 	.podcast{
 		&__container{
