@@ -18,6 +18,7 @@ Table of content
 -Ivahid_difference
 -faq
 -blog
+-services card
 -Media queries
 */
 
@@ -621,6 +622,49 @@ i{
 			}
 		}
 	}
+}
+
+/*--------------------------------- services card -------------------------------------*/
+.services_card{
+	margin-bottom: 162px;
+	.title{
+		color: $accent_color;
+		margin-bottom: 66px;
+		
+	}
+
+	&__wrapper{
+		padding: 0 48px;
+		.item{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+			margin: 0 48px;
+			background-color: white;
+			.img_wrapper{
+				text-align: center;
+				padding-top: 64px;
+			}
+			.text_wrapper{
+				text-align: center;
+				padding: 34px 0;
+				h4{
+					color: #333333;
+					font-size: 24px;
+					font-weight: 700;
+					line-height: 35px;
+					margin-bottom: 5px;
+				}
+				span{
+					font-weight: 400;
+					line-height: 35px;
+					color: $text_color;
+				}	
+			}
+	}
+	}
+
 }
 
 //Media queries
