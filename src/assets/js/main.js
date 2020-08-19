@@ -84,3 +84,32 @@ var categories_description_list = new Swiper('.categories_description_list', {
 	  } 
 	});
   }
+  
+  // 'blog' section swiper slider
+  var blog__posts = new Swiper('.blog__posts', {
+	spaceBetween: 32,
+	slidesPerView: 1,
+	loop: true,
+	freeMode: true,
+	loopedSlides: 5, //looped slides should be the same
+	watchSlidesVisibility: true,
+	watchSlidesProgress: true,
+	pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+	breakpoints: {
+		576: {
+		  slidesPerView: 2,
+		  spaceBetween: 32
+		},
+		992: {
+		  slidesPerView: 3,
+		  spaceBetween: 32
+		},
+		1918: {
+		  slidesPerView: 4,
+		  spaceBetween: 32
+		}
+	  }
+  });
