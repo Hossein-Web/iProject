@@ -13,6 +13,7 @@ Table of content
 -Web design
 -Design effect
 -your position
+-Select team
 -Media queries
 */
 
@@ -287,6 +288,63 @@ i{
   
   }
 
+  //------------- Select team section -------------
+.select_team{
+    padding-top: 89px;
+    position: relative;
+    margin-bottom: 134px;
+    &__img{
+        position: relative;
+        img{
+            position: relative;
+            right: -35%;
+        } 
+        &__lable{
+            display: flex;
+            position: absolute;
+            bottom: 80px;
+            right: 30%;
+            border-radius: 52px ;
+            background-color: white;
+            box-shadow: 0 0 81px rgba(56, 66, 77, 0.08);
+            height: 105px;
+            align-items: center;
+            .icon{
+                flex: 0 0 auto;
+                background-color: $accent_color;
+                border-radius: 50%;
+                padding: 32px;
+                margin-right: 19px;
+            }
+            .content{
+                font-size: 24px;
+                font-weight: 700;
+                flex: 0 0 auto;
+                padding-right:17px ;
+                margin-left: 200px;
+                p:nth-child(2){
+                    color: $accent_color;
+                }
+            }
+        }      
+    }
+&__content{
+    font-size: 18px;
+    padding-top: 160px;
+    margin-right: -300px;   
+.title{
+    margin-bottom: 10px;
+    h4{
+        font-size: 24px ;
+        font-weight: 700;          
+        margin-bottom: 17px;
+        span{
+            color: $accent_color;
+        }
+    }
+}
+}
+}
 //Media queries
 
 //---------------------- > 1200px ----------------------
@@ -294,6 +352,24 @@ i{
 	//Design_effect Section
 		.design_effect{
 			padding-left: 377px;
+	}
+//Select_team Section
+.select_team{
+	padding-left: 370px;
+	}
+	}
+
+	//---------------------- > 1200px and < 1600px ---------------------- 
+@media only screen and( max-width: 1600px) and (min-width: 1200px ){
+	//Select_team Section
+	.select_team{
+	padding-left: 50px;
+	&__img__lable{
+		right: 10%;
+	}
+	&__content{
+		margin-right: -300px;
+	}
 	}
 	}
 
@@ -343,6 +419,13 @@ i{
 			margin-bottom: 10px; 	
 		}
 	}
+	//Select team
+	.select_team{
+		padding-left: 50px;
+		&__content{
+			margin-right: 0;
+		}
+		}
 }
 
 /*----------------------< 992px ------------------------*/
@@ -365,7 +448,46 @@ i{
 			}
 		}
 	}
+//Select_team Section
+    .select_team{
+        &__content{
+            padding-right: 20px;
+               }
+    }
 }
+
+//---------------------- < 768px ----------------------
+@media only screen and( max-width: 768px ){
+	//Select_team Section
+		.select_team__img__lable{
+			height: 80px;
+			.content{
+				margin-left: 100px;
+			}
+		}
+		}
+
+		
+//---------------------- < 576px ----------------------
+@media only screen and( max-width: 576px ){
+	//Select_team Section
+		.select_team__img__lable{
+			height: 70px;
+			right: 20px;
+			bottom: 10px;
+			.icon{
+				height: 60px;
+				width: 60px;
+				i{
+					margin: 20px auto;
+				}
+			}
+			.content{
+				margin-left: 50px;
+			}
+		}
+	 
+		}
 
 /*----------------------< 450px ------------------------*/
 @media only screen and (max-width: 450px){
