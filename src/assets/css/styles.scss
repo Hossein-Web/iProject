@@ -215,16 +215,16 @@ i{
 					left: 0;
 					height: 100%;
 					width: 20%;
-				  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
-				  z-index: 1000;
+					background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+					z-index: 1000;
 				}
 			}
-		position: absolute;
-		top: 27%;
-		right: 28%;
-		left: 0;
+			position: absolute;
+			top: 25%;
+			right: 28%;
+			left: 0;
 			.categories_title_list{
-				margin-bottom: 53px;
+				margin-bottom: 35px;
 				.swiper-slide{
 					margin-left: 0;
 					margin-right: 0;
@@ -252,6 +252,7 @@ i{
 							color: white;
 							background-color: $accent_color;
 							border: none;
+							transition: all 200ms;
 						}
 						div{
 							color: $text_color;
@@ -264,13 +265,31 @@ i{
 			.categories_description_list{
 				.slide_content{
 					color: $text_color;
+					position: relative;
+					padding-right: 30px;
+					padding-top: 14px;
+					span{
+						display: none;
+						position: absolute;
+						color: #c7c7c7;
+						z-index: -1;
+						right: 0;
+						top: 9px;
+						font-size: 33px;
+						font-weight: 300;
+						line-height: 33px;
+					}
 					h4{
 						margin-bottom: 19px;
+						background-color: white;
 					}
 					opacity: 0.5;
 				}
 				.swiper-slide-active{
 					.slide_content{
+						span{
+							display: inline;
+						}
 						h4{
 							color: $accent_color;
 						}
@@ -286,7 +305,7 @@ i{
 		}
 		.text{
 			color: $text_color;
-			margin-bottom: 55px;
+			margin-bottom: 50px;
 			.title{
 				h4{
 					color: $accent_color;
@@ -1220,6 +1239,51 @@ border-radius: 5px;
 	}
 	}
 
+	/*---------------------- < 1800px ------------------------*/
+	@media only screen and (max-width: 1800px){
+		.your_position{
+			.content_wrapper{
+				top: 20%;
+			}
+			.text{
+				margin-bottom: 10px;
+				p{
+					padding-left: 20px;
+					font-size: 16px;
+				}
+			}
+			.categories_title_list{
+				margin-bottom: 0 !important; 
+				.slide_info{
+					font-size: 16px !important;
+					span{
+						padding: 15px 17px !important;
+					}
+				}	
+			}
+			.categories_description_list{
+				.slide_content{
+					padding-right: 20px !important;
+					span{
+						top: -9px !important;
+						right: 2px !important;
+						top: 6px !important;
+						font-size: 24px !important;
+						font-weight: 300 !important;
+						line-height: 24px !important;
+					}
+					h4{
+						font-size: 17px !important;
+						font-weight: 700;
+					}
+					p{
+						font-size: 16px !important;
+					}
+				}
+			}
+		}
+		}
+
 	//---------------------- > 1200px and < 1600px ---------------------- 
 @media only screen and( max-width: 1600px) and (min-width: 1200px ){
 	//Select_team Section
@@ -1235,22 +1299,13 @@ border-radius: 5px;
 	}
 
 /*---------------------- < 1500px ------------------------*/
-@media only screen and (max-width: 1500px){
-	.your_position{
-		.content_wrapper{
-			top: 17%;
-		}
-		.text{
-			margin-bottom: 10px;
-			p{
-				padding-left: 20px;
-			}
-		}
-		.categories_title_list{
-			margin-bottom: 10px; 	
-		}
-	}
-}
+// @media only screen and (max-width: 1500px){
+// 	.your_position{
+// 		.content_wrapper{
+// 			top: 17%;
+// 		}
+// 	}
+// }
 
 /*----------------------< 1200px ------------------------*/
 @media only screen and (max-width: 1200px){
@@ -1262,8 +1317,12 @@ border-radius: 5px;
         padding-top: 50px;
     }
 }
-	.web_design_sec__text{
+
+	//web_design_sec Section
+	.web_design_sec{
+		&__text{
 		margin-bottom: 30px;
+		}
 	}
 
 	.your_position{
