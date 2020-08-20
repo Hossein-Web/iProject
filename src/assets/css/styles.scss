@@ -135,6 +135,7 @@ i{
 .web_design_sec{
 	position: relative;
 	padding: 221px 0;
+	margin-bottom: 89px;
 	&::before{
 		position: absolute;
 		left: 0;
@@ -173,7 +174,8 @@ i{
 
 //------------- Design effect section -------------
 .design_effect{
-	padding-top: 89px;
+	// padding-top: 89px;
+	margin-bottom: 15px;
 &__content{
 	font-size: 18px;
 	padding-right: 47px;
@@ -196,6 +198,7 @@ i{
 	background-position-y: center;
 	background-position-x: 100%;
 	background-repeat: no-repeat;
+	margin-bottom: 131px;
 	&__wrapper{
 		overflow: hidden;
 		img{
@@ -302,9 +305,9 @@ i{
 
   //------------- Select team section -------------
 .select_team{
-    padding-top: 89px;
+    // padding-top: 89px;
     position: relative;
-    margin-bottom: 134px;
+    margin-bottom: 100px;
     &__img{
         position: relative;
         img{
@@ -462,9 +465,9 @@ i{
 
 //------------- Portfolio -------------
 .portfolio{
-    margin-bottom: 87px;
-    padding-bottom: 442px;
-    padding-top: 126px;
+    // margin-bottom: 87px;
+    padding-bottom: 150px;
+    padding-top: 180px;
     position: relative;
     &__background{
         position: relative;
@@ -586,6 +589,7 @@ i{
 
 /*--------------------------------- Faq -------------------------------------*/
 .faq{
+	margin-bottom: 109px;
 	padding: 242px 0;
 	background-image: url('../img/faq_back.jpg');
 	background-repeat: no-repeat;
@@ -656,9 +660,11 @@ i{
 
 /*--------------------------------- Blog -------------------------------------*/
 .blog{
-	padding-top: 109px;
+	// padding-top: 109px;
+	margin-bottom: 82px;
 	&__posts{
-		padding-bottom: 92px;
+		// padding-bottom: 92px;
+		padding-bottom: 20px;
 		&::after{
             content: '';
             display: block;
@@ -756,7 +762,8 @@ i{
 
 //------------- Customers -------------
 .customers{
-    margin-bottom: 154px;
+	// margin-bottom: 154px;
+    margin-bottom: 134px;
     &__wrapper{
         &::after{
             content: '';
@@ -1050,7 +1057,8 @@ border-radius: 5px;
 
 /*--------------------------------- content encyclopedia -------------------------------------*/
 .content_encyclopedia{
-	margin-bottom: 217px;
+	// margin-bottom: 217px;
+	margin-bottom: 321px;
 	&__item_wrapper{
 		&:not(:last-child){
 			margin-bottom: 50px;
@@ -1085,7 +1093,8 @@ border-radius: 5px;
     background-color: $accent_color;
     padding-top: 54px;
     padding-bottom: 26px;
-    margin-bottom: 197px;
+	// margin-bottom: 197px;
+    margin-bottom: 233px;
     &__wrapper{
         display: flex;
         .img{
