@@ -134,6 +134,26 @@ var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 	  }
   });
 
+   //videos swiper
+   var swiper = new Swiper('.videos__wrapper > .swiper-container', {
+	slidesPerView: 1,
+	spaceBetween: 34,
+	pagination: {
+	  el: '.swiper-pagination',
+	  clickable: true,
+	},
+	breakpoints: {
+		768: {
+		  slidesPerView: 3,
+		  spaceBetween: 34
+		},
+		576: {
+			slidesPerView: 2,
+			spaceBetween: 34
+		  },		
+	  }
+  });
+  
 // faq section
   var coll = document.getElementsByClassName("faq__collapsible");
   var i;
