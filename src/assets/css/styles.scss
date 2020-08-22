@@ -828,15 +828,16 @@ i{
 	// margin-bottom: 154px;
     margin-bottom: 134px;
     &__wrapper{
-		padding-top: 76px;
-		box-shadow: -20px 36px -43px rgba(0,0,0,0.6);
+		position: relative;
+		padding-top: 72px;
+		box-shadow: 0 -20px 36px -43px rgba(0,0,0,0.6);
         &::after{
             content: '';
             display: block;
             position: absolute;
-            height: 1px;
+            height: 2px;
             background-color: #f0f1f7 ;
-            top: 125px;
+            top: 120px;
             left: 0;
             right: 0;
             width: 100%;
@@ -855,16 +856,17 @@ i{
         h4{
 			font-size: 30px;
 			line-height: 35px;
-            padding-bottom: 12px;
-            position: relative;
+			padding-bottom: 10px;
+			font-weight: 400;
 		}
 		p{
 			font-size: 24px;
 			line-height: 35px;
+			font-weight: 400;
 		}
     }
     .swiper-pagination{
-        top: 30px;
+        top: 27px;
         bottom: unset;
         text-align: left;
         position: absolute;
