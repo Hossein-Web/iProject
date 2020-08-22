@@ -983,41 +983,61 @@ border-radius: 5px;
 .services_card{
 	margin-bottom: 162px;
 	.title{
-		color: $accent_color;
-		margin-bottom: 66px;
+		margin-bottom: 56px;
+		h4{
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 35px;
+			color: $accent_color;
+			
+			span{
+				color: $text_color;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 35px;
+			}
+		}
+		span{
+			color: $text_color;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 35px;
+		}
+
 		
 	}
 
 	&__wrapper{
 		padding: 0 48px;
-		.item{
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			height: 100%;
-			margin: 0 48px;
-			background-color: white;
-			.img_wrapper{
-				text-align: center;
-				padding-top: 64px;
-			}
-			.text_wrapper{
-				text-align: center;
-				padding: 34px 0;
-				h4{
-					color: #333333;
-					font-size: 24px;
-					font-weight: 700;
-					line-height: 35px;
-					margin-bottom: 5px;
+			.item{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				box-shadow: 0 15px 70px rgba(56, 66, 77, 0.04);
+				margin: 0 48px;
+				height: 100%;
+				background-color: white;
+				.img_wrapper{
+					text-align: center;
+					padding-top: 64px;
 				}
-				span{
-					font-weight: 400;
-					line-height: 35px;
-					color: $text_color;
-				}	
-			}
-	}
+				.text_wrapper{
+					text-align: center;
+					padding: 34px 0;
+					h4{
+						color: #333333;
+						font-size: 24px;
+						font-weight: 700;
+						line-height: 35px;
+						margin-bottom: 5px;
+					}
+					span{
+						font-weight: 400;
+						line-height: 35px;
+						color: $text_color;
+					}	
+				}
+		}
 	}
 
 }
@@ -1335,6 +1355,17 @@ border-radius: 5px;
 		}
 		}
 
+	//---------------------- > 1200px ---------------------- 
+	// @media only screen and (min-width: 1200px ){
+	// 	.services_card{
+	// 		&__wrapper{
+	// 			.item{
+	// 				height: 100%;
+	// 			}
+	// 		}
+	// 	}
+	// }
+
 	//---------------------- > 1200px and < 1600px ---------------------- 
 @media only screen and( max-width: 1600px) and (min-width: 1200px ){
 	//Select_team Section
@@ -1464,6 +1495,15 @@ border-radius: 5px;
         padding-bottom: 0;
     }
 }
+
+.services_card{
+		&__wrapper{
+			.item{
+				height: auto;
+				margin-bottom: 20px;
+			}
+		}
+		}
 }
 
 //---------------------- < 768px ----------------------
@@ -1608,6 +1648,12 @@ border-radius: 5px;
 		background-color: unset;
 		padding-right: unset;
 	}
+	}
+
+	.services_card{
+		&__wrapper{
+			padding: 0;
+		}
 	}
 
 	// podcast
