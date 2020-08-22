@@ -817,13 +817,15 @@ i{
 	// margin-bottom: 154px;
     margin-bottom: 134px;
     &__wrapper{
+		padding-top: 76px;
+		box-shadow: -20px 36px -43px rgba(0,0,0,0.6);
         &::after{
             content: '';
             display: block;
             position: absolute;
             height: 1px;
             background-color: #f0f1f7 ;
-            top: 47px;
+            top: 125px;
             left: 0;
             right: 0;
             width: 100%;
@@ -831,21 +833,27 @@ i{
         .swiper-slide{
           display: flex;
           justify-content: center;
-          align-items: center;
+		  align-items: center;
+		  height: auto;
         }
     }
     &__title{
-      margin-bottom: -7px;
+	  margin-bottom: 34px;
+	  background-color: $background_color;
+	  display: inline-block;
         h4{
-            font-size: 30px;
-            display: inline-block;
-            background-color: $background_color;
+			font-size: 30px;
+			line-height: 35px;
             padding-bottom: 12px;
             position: relative;
-        }
+		}
+		p{
+			font-size: 24px;
+			line-height: 35px;
+		}
     }
     .swiper-pagination{
-        top: 43px;
+        top: 30px;
         bottom: unset;
         text-align: left;
         position: absolute;
