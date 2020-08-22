@@ -641,14 +641,13 @@ i{
 
 /*--------------------------------- Faq -------------------------------------*/
 .faq{
+	padding: 232px 0;
 	margin-bottom: 109px;
-	padding: 242px 0;
 	position: relative;
 	background-color: white;
 	&__background{
 		position: absolute;
-		top: 242px;
-		transform: translateY(-50%);
+		top: 0;
 	}
 	  .title{
 		  color: $text_color;
@@ -706,9 +705,11 @@ i{
 	  }
 	  
 	  &__content {
+		  &:not(:last-child){  
+			margin-bottom: 32px;
+		  }
 		font-weight: 400;
 		line-height: 40px;
-		margin-bottom: 32px;
 		border-bottom: 1px solid #f0f1f7;
 		color: $text_color;
 		font-size: 20px;
@@ -1391,6 +1392,7 @@ border-radius: 5px;
 		}
 	}
 
+	//your_position
 	.your_position{
 		.content_wrapper{
 			top: 17%;
@@ -1403,6 +1405,12 @@ border-radius: 5px;
 		}
 		.categories_title_list{
 			margin-bottom: 10px; 	
+		}
+	}
+	//faq
+	.faq{
+		&__background{
+			top: 100px;
 		}
 	}
 	//Select team
@@ -1549,6 +1557,12 @@ border-radius: 5px;
 		padding-right: 20px;
 	}
 
+	//faq
+	.faq{
+		&__background{
+			top: 232px;
+		}
+	}
 	
 //Customers
 .customers{
