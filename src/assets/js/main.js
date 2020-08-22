@@ -89,22 +89,27 @@ var categories_description_list = new Swiper('.categories_description_list', {
 var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 	slidesPerView: 1,
 	spaceBetween: 35,
+	// autoHeight: true,
 	pagination: {
 	  el: '.swiper-pagination',
 	  clickable: true,
 	},
 	breakpoints: {
 		// when window width is >= 320px
+		1200: {
+			slidesPerView: 4,
+			spaceBetween: 35
+		  },
 		768: {
-		  slidesPerView: 4,
+		  slidesPerView: 3,
 		  spaceBetween: 35
 		},
 		576: {
-			slidesPerView: 3,
+			slidesPerView: 2,
 			spaceBetween: 35
 		  },
 		  320: {
-			slidesPerView: 2,
+			slidesPerView: 1,
 			spaceBetween: 35
 		  },		
 	  }
