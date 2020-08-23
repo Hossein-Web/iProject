@@ -196,22 +196,31 @@ i{
 
 //------------- Design effect section -------------
 .design_effect{
-	// padding-top: 89px;
-	margin-bottom: 15px;
-&__content{
-	font-size: 18px;
-	padding-right: 47px;
-	padding-top: 218px;   
-.title{
-	margin-bottom: 10px;
-	h4{
-		font-size: 24px ;
-		font-weight: 700;          
-		color: $accent_color;
-		margin-bottom: 17px;
+	margin-bottom: 113px;
+	&__wrapper{
+		display: flex;
+		.img{
+			flex: 0 0 auto;
+		}
+		.content{
+			font-size: 18px;
+			line-height: 35px;
+			padding-right: 47px;
+			padding-bottom: 36px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		.title{
+			margin-bottom: 10px;
+			h4{
+				font-size: 24px ;
+				font-weight: 700;          
+				color: $accent_color;
+				margin-bottom: 10px;
+			}
+		}
+		}
 	}
-}
-}
 }
 
 /*--------------------------------- Your position -------------------------------------*/
@@ -1303,10 +1312,6 @@ i{
   //media queries
   //---------------------- > 1200px ----------------------
 @media only screen and( min-width: 1200px ){
-	//Design_effect Section
-		.design_effect{
-			padding-left: 377px;
-	}
 //Select_team Section
 .select_team{
 	padding-left: 370px;
@@ -1384,25 +1389,19 @@ i{
 	}
 
 /*---------------------- < 1500px ------------------------*/
-// @media only screen and (max-width: 1500px){
-// 	.your_position{
-// 		.content_wrapper{
-// 			top: 17%;
-// 		}
-// 	}
-// }
+@media only screen and (max-width: 1500px){
+		//Design_effect Section
+		.design_effect{
+			&__wrapper{
+				.img{
+					flex: 0 0 50%;
+				}
+			}
+	}
+}
 
 /*----------------------< 1200px ------------------------*/
 @media only screen and (max-width: 1200px){
-	//Design_effect Section
-    .design_effect{
-        padding-left: 20px;
-    &__content{
-        padding-right: 20px;
-        padding-top: 50px;
-    }
-}
-
 	//web_design_sec Section
 	.web_design_sec{
 		&__img_wrapper{
@@ -1462,6 +1461,15 @@ i{
 
 /*----------------------< 992px ------------------------*/
 @media only screen and (max-width: 992px){
+//Design_effect Section
+			.design_effect{
+				&__wrapper{
+					flex-direction: column;
+					.content{
+						padding-right: 20px;
+					}
+				}
+		}
 	.your_position{
 		background-image: unset;
 		padding: 0 20px;
