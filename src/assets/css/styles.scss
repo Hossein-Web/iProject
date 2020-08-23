@@ -189,11 +189,18 @@ body{
 		bottom: -15px;
 		right: 50%;
 		transform: translateX(50%);
-		padding: 40px;
+		padding: 45px;
 		border-radius: 50%;
 		box-shadow: 0 15px 30px rgba(56, 66, 77, 0.08);
 		background-color: #ffffff;
 		background-image: linear-gradient(to top, #ffffff 0%, #f9f9f9 100%);
+		span{
+			position: absolute;
+			top: 50%;
+			right: 50%;
+			transform: translate(50%, -50%);
+			color: $text_color;
+		}
 	}
 }
 
