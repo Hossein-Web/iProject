@@ -1579,21 +1579,25 @@ i{
 //---------------------- < 576px ----------------------
 @media only screen and( max-width: 576px ){
 	//Select_team Section
-	.select_team__img__lable{
-		height: 70px;
-		right: 20px;
-		bottom: 10px;
-		.icon{
-			height: 60px;
-			width: 60px;
-			i{
-				margin: 20px auto;
+	.select_team{
+		padding-left: 0;
+		&__img__lable{
+			height: 70px;
+			right: 0;
+			bottom: -50px;
+			.icon{
+				height: 60px;
+				width: 60px;
+				padding: 25px;
 			}
+			.content{
+		  margin-left: 50px;
 		}
-		.content{
-      margin-left: 50px;
-    }
-  }
+	  }
+	  &__content{
+		  padding-right:0 ;
+	  }
+	}
 //Services Section
 		.services{
 			&__list__item{
