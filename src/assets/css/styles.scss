@@ -1733,6 +1733,15 @@ i{
 		margin-left: 10px;
 		margin-right: 10px;
 	}
+	.blog{
+		&__posts{
+			&::after{
+				display: none;
+			}
+			.swiper-pagination{
+				top: 75px;
+			}
+		}
 //services
 .services{
 	.read_more{
