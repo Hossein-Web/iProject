@@ -884,7 +884,8 @@ i{
 
 //------------- Videos -------------
 .videos{
-    margin-bottom: 119px;
+	margin-bottom: 119px;
+	position: relative;
     &__wrapper{
         &::after{
             content: '';
@@ -988,7 +989,12 @@ i{
         width: auto;
         background-color: $background_color;
         padding-right: 13px;
-    }
+	}
+	&__background{
+		position: absolute;
+		bottom: -100px;
+		right: -245px;
+	}
 }
 
 /*--------------------------------- services card -------------------------------------*/
