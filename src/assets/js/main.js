@@ -180,8 +180,7 @@ var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 	spaceBetween: 32,
 	slidesPerView: 1,
 	loop: true,
-	freeMode: true,
-	loopedSlides: 5, //looped slides should be the same
+	loopedSlides: 5,
 	watchSlidesVisibility: true,
 	watchSlidesProgress: true,
 	pagination: {
