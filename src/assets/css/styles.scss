@@ -1271,7 +1271,7 @@ i{
               }
           }
           .content{
-              width: 65%;
+              width: 48%;
               margin-right: 100px;
               ul{
                   list-style: none;
@@ -1454,7 +1454,7 @@ i{
 //Order
 			.order__wrapper{
 				.title{
-					padding-left: 0;
+					padding-left: 10px;
 				}
 			}
 }
@@ -1547,12 +1547,23 @@ i{
 		}
 	}
 
-	//Order
-    .order{
-        .content{
-            padding-right: 0;
-        }
-    }
+		//Order
+		.order{
+			padding-left: 20px;
+			padding-right: 20px;
+			&__wrapper{
+				flex-direction: column;
+				.title{
+					margin-bottom: 50px;
+				}  
+				.content{
+					width: 100%;
+					padding-right: 0;
+					margin-right: 0;
+				}      
+			}
+			
+		}
 		}
 
 		
@@ -1707,23 +1718,6 @@ i{
 			}
 		}
 	}
-	//Order
-    .order{
-        padding-left: 20px;
-        padding-right: 20px;
-        &__wrapper{
-            flex-direction: column;
-            .title{
-                margin-bottom: 50px;
-            }  
-            .content{
-                width: 100%;
-                padding-right: 0;
-                margin-right: 0;
-            }      
-        }
-        
-    }
 	 
 		}
 
@@ -1732,6 +1726,10 @@ i{
 	section{
 		margin-left: 10px;
 		margin-right: 10px;
+	}
+
+	.order{
+		padding: 0;
 	}
 }
 
