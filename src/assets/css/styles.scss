@@ -1141,15 +1141,14 @@ i{
 
 /*--------------------------------- content encyclopedia -------------------------------------*/
 .content_encyclopedia{
-	// margin-bottom: 217px;
 	margin-bottom: 321px;
 	&__item_wrapper{
 		&:not(:last-child){
-			margin-bottom: 50px;
+			margin-bottom: 45px;
 		}
 		h4, h5{
 			color: #333333;
-			margin-bottom: 50px;
+			margin-bottom: 45px;
 			font-weight: 700;
 		}
 		h4{
@@ -1159,6 +1158,7 @@ i{
 			font-size: 18px;
 		}
 		.item_description{
+			color: #333333;
 			font-weight: 400;
 		}
 		.wiki_link{
