@@ -16,6 +16,7 @@ Table of content
 -Select team
 -Services
 -Ivahid_difference
+-Portfolio
 -faq
 -blog
 -customers
@@ -1556,12 +1557,6 @@ border-radius: 5px;
 		padding-right: 20px;
 	}
 
-	//Portfolio Section
-	.portfolio{
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-
 	//faq
 	.faq{
 		&__background{
@@ -1693,6 +1688,16 @@ border-radius: 5px;
 	section{
 		margin-left: 10px;
 		margin-right: 10px;
+	}
+	.portfolio{
+		&__background{
+			display: none;
+		}
+		.view_more{
+			a{
+				padding: 10px 5px;
+			}
+		}
 	}
 }
 
