@@ -1483,7 +1483,7 @@ body{
 			}
 		}
 		&__content{
-			padding-top: 20px;
+			padding-top: 50px;
 			margin-right: 0;
 		}
 		}
@@ -1767,6 +1767,10 @@ body{
 		&__img{
 			&__lable{
 				bottom: 0;
+				.lable{
+					margin-left: 20px;
+					font-size: 18px;
+				}
 			}
 		}
 	}
