@@ -75,7 +75,7 @@ var categories_description_list = new Swiper('.categories_description_list', {
 			spaceBetween: 10
 		  },
 		1700: {
-		slidesPerView: 3,
+		slidesPerView: 4,
 		spaceBetween: 10
 		},
 		1918: {
