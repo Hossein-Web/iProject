@@ -1061,25 +1061,50 @@ body{
 				margin: 0 48px;
 				height: 100%;
 				background-color: white;
+				transition: 0.3s;
 				.img_wrapper{
 					text-align: center;
 					padding-top: 64px;
+					svg{
+						.wrapper_part, .inner_part{
+							transition: 0.3s;
+						}
+					}
 				}
 				.text_wrapper{
 					text-align: center;
-					padding: 34px 0;
+					padding: 27px 0;
 					h4{
 						color: #333333;
 						font-size: 24px;
 						font-weight: 700;
 						line-height: 35px;
 						margin-bottom: 5px;
+						transition: 0.3s;
 					}
 					span{
 						font-weight: 400;
 						line-height: 35px;
 						color: $text_color;
+						transition: 0.3s;
 					}	
+				}
+
+				&:hover{
+					background-color: $accent_color;
+					.img_wrapper{
+						.wrapper_part{
+							fill: white;
+						}
+						.inner_part{
+							fill: $text_color;
+						}
+					}
+					.text_wrapper{
+						h4, span{
+							color: white;
+						}
+					}
 				}
 		}
 	}
