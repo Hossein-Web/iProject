@@ -356,20 +356,15 @@ i{
 
   //------------- Select team section -------------
 .select_team{
-    // padding-top: 89px;
     position: relative;
     margin-bottom: 100px;
     &__img{
-        position: relative;
-        img{
-            position: relative;
-            right: -35%;
-        } 
+		position: relative;
         &__lable{
             display: flex;
             position: absolute;
             bottom: 80px;
-            right: 30%;
+            left: 190px;
             border-radius: 52px ;
             background-color: white;
             box-shadow: 0 0 81px rgba(56, 66, 77, 0.08);
@@ -382,7 +377,7 @@ i{
                 padding: 32px;
                 margin-right: 19px;
             }
-            .content{
+            .lable{
                 font-size: 24px;
                 font-weight: 700;
                 flex: 0 0 auto;
@@ -395,9 +390,10 @@ i{
         }      
     }
 &__content{
-    font-size: 18px;
-    padding-top: 160px;
-    margin-right: -300px;   
+	font-size: 18px;
+	text-align: justify;
+	padding-top: 160px;
+	padding-right: 20px;  
 .title{
     margin-bottom: 16px;
     h4{
@@ -1321,10 +1317,7 @@ i{
   //media queries
   //---------------------- > 1200px ----------------------
 @media only screen and( min-width: 1200px ){
-//Select_team Section
-.select_team{
-	padding-left: 370px;
-	}
+	
 	}
 
 	/*---------------------- < 1800px ------------------------*/
@@ -1385,16 +1378,7 @@ i{
 
 	//---------------------- > 1200px and < 1600px ---------------------- 
 @media only screen and( max-width: 1600px) and (min-width: 1200px ){
-	//Select_team Section
-	.select_team{
-	padding-left: 50px;
-	&__img__lable{
-		right: 10%;
-	}
-	&__content{
-		margin-right: -300px;
-	}
-	}
+
 	}
 
 /*---------------------- < 1500px ------------------------*/
@@ -1444,8 +1428,13 @@ i{
 	}
 	//Select team
 	.select_team{
-		padding-left: 50px;
+		&__img{
+			&__lable{
+				left: 0;
+			}
+		}
 		&__content{
+			padding-top: 20px;
 			margin-right: 0;
 		}
 		}
@@ -1531,9 +1520,6 @@ i{
 	//Select_team Section
 	.select_team__img__lable{
 		height: 80px;
-		.content{
-			margin-left: 100px;
-		}
 	}
 	//Ivahid_difference Section
 	.ivahid_difference{
@@ -1583,8 +1569,6 @@ i{
 		padding-left: 0;
 		&__img__lable{
 			height: 70px;
-			right: 0;
-			bottom: -50px;
 			.icon{
 				height: 60px;
 				width: 60px;
@@ -1732,7 +1716,13 @@ i{
 		margin-left: 10px;
 		margin-right: 10px;
 	}
-  
+	.select_team{
+		&__img{
+			&__lable{
+				bottom: 0;
+			}
+		}
+	}
 	.services_card{
 		&__wrapper{
 			.item{
