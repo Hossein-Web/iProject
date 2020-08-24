@@ -101,7 +101,6 @@ body{
 	color: $text_color;   
 	line-height: 35px; 
   font-size: 18px;
-	background-color: $background_color; 
 }
 // i{
 // 	width: 10px;
@@ -659,13 +658,38 @@ body{
 
 /*--------------------------------- Faq -------------------------------------*/
 .faq{
-	padding: 232px 0;
+	// padding: 232px 0;
+	padding-top: 107px;
+	padding-bottom: 300px;
 	margin-bottom: 109px;
 	position: relative;
 	background-color: white;
-	&__background{
+	&::before{
+		content: '';
+		display: block;
 		position: absolute;
 		top: 0;
+		left: 0;
+		width: 239px;
+		height: 552px;
+		background-image: url( '../img/top_back.jpg' );
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center center;
+	}
+
+	&::after{
+		content: '';
+		display: block;
+		position: absolute;
+		top: 274px;
+		right: 0;
+		width: 360px;
+		height: 651px;
+		background-image: url( '../img/bottom_back.jpg' );
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center center;
 	}
 	  .title{
 		  color: $text_color;
@@ -684,6 +708,7 @@ body{
 	  }
 	&__collapsible {
 		position: relative;
+		z-index: 1;
 		text-align: right;
 		padding-right: 15px;
 		transition: all 250ms ease-in-out;
@@ -726,6 +751,8 @@ body{
 		  &:not(:last-child){  
 			margin-bottom: 32px;
 		  }
+		z-index: 1;
+		position: relative;
 		font-weight: 400;
 		line-height: 40px;
 		border-bottom: 1px solid #f0f1f7;
@@ -1470,11 +1497,11 @@ body{
 		}
 	}
 	//faq
-	.faq{
-		&__background{
-			top: 100px;
-		}
-	}
+	// .faq{
+	// 	&__background{
+	// 		top: 100px;
+	// 	}
+	// }
 	//Select team
 	.select_team{
 		&__img{
@@ -1646,8 +1673,8 @@ body{
 
 	//faq
 	.faq{
-		&__background{
-			top: 232px;
+		&::before, &::after{
+			display: none;
 		}
 	}
 	
