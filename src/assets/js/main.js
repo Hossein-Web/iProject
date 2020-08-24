@@ -89,22 +89,27 @@ var categories_description_list = new Swiper('.categories_description_list', {
 var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 	slidesPerView: 1,
 	spaceBetween: 35,
+	// autoHeight: true,
 	pagination: {
 	  el: '.swiper-pagination',
 	  clickable: true,
 	},
 	breakpoints: {
 		// when window width is >= 320px
+		1200: {
+			slidesPerView: 4,
+			spaceBetween: 35
+		  },
 		768: {
-		  slidesPerView: 4,
+		  slidesPerView: 3,
 		  spaceBetween: 35
 		},
 		576: {
-			slidesPerView: 3,
+			slidesPerView: 2,
 			spaceBetween: 35
 		  },
 		  320: {
-			slidesPerView: 2,
+			slidesPerView: 1,
 			spaceBetween: 35
 		  },		
 	  }
@@ -134,6 +139,26 @@ var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 	  }
   });
 
+   //videos swiper
+   var swiper = new Swiper('.videos__wrapper > .swiper-container', {
+	slidesPerView: 1,
+	spaceBetween: 34,
+	pagination: {
+	  el: '.swiper-pagination',
+	  clickable: true,
+	},
+	breakpoints: {
+		768: {
+		  slidesPerView: 3,
+		  spaceBetween: 34
+		},
+		576: {
+			slidesPerView: 2,
+			spaceBetween: 34
+		  },		
+	  }
+  });
+  
 // faq section
   var coll = document.getElementsByClassName("faq__collapsible");
   var i;
@@ -155,8 +180,7 @@ var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 	spaceBetween: 32,
 	slidesPerView: 1,
 	loop: true,
-	freeMode: true,
-	loopedSlides: 5, //looped slides should be the same
+	loopedSlides: 5,
 	watchSlidesVisibility: true,
 	watchSlidesProgress: true,
 	pagination: {
@@ -214,13 +238,14 @@ var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 	wavesurfer.on('ready', function () {
 		$( '.duration' ).html( formatTime( wavesurfer.getDuration() ) );
 		$( '.podcast_button' ).on( 'click', function(){
-			if( $( this ).hasClass( 'paused' ) ) {
-				$(this).removeClass( 'paused' );
-				$(this).addClass( 'playing' );
+			var icon_element = $( this ).find('span');
+			if( icon_element.hasClass('icon-play') ) {
+				icon_element.removeClass( 'icon-play' );
+				icon_element.addClass( 'icon-pause' );
 				wavesurfer.play();
 			}else{
-				$(this).removeClass( 'playing' );
-				$(this).addClass( 'paused' );
+				icon_element.removeClass( 'icon-pause' );
+				icon_element.addClass( 'icon-play' );
 				wavesurfer.pause();
 			}
 		} );
@@ -231,6 +256,5 @@ var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 		progress_percent = wavesurfer.getCurrentTime()*100/wavesurfer.getDuration();
 		$( '.current_time' ).html( formatTime( wavesurfer.getCurrentTime() ) );
 		setProgress( progress_percent );
-		console.log( progress_percent );
 	} );
 	
