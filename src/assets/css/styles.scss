@@ -1362,14 +1362,7 @@ body{
 //------------- Order -------------
 .order{
     margin-bottom: 100px;
-      &__wrapper{
-          display: flex;
-          .title{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-left: 214px;
-            box-shadow: -100px 0px 38px -14px rgba(179, 179, 179, 0.1);
+          &__title{
               h4{
                   font-size: 24px;
                   font-weight: 700;
@@ -1379,18 +1372,16 @@ body{
                   }
               }
           }
-          .content{
-              width: 40%;
-              margin-right: 100px;
+          &__content{
+			box-shadow: 41px 0px 13px -14px rgba(179, 179, 179, 0.1);
               ul{
-                  list-style: none;
                   li{
                       display: flex;
-                      align-items: center;
+					  align-items: center;
                       padding: 16px;
                       background-color: #f0f1f7;
                       border-radius: 49px;
-                      transition: all 300ms;
+                      transition: 300ms;
                       &:hover{
                           background-color: $accent_color;
                           p{
@@ -1414,8 +1405,6 @@ body{
                   }
               }
           }
-  
-      }
   }
 
   //media queries
@@ -1545,12 +1534,6 @@ body{
 				padding: 0;
 			}
 		}
-//Order
-			.order__wrapper{
-				.title{
-					padding-left: 10px;
-				}
-			}
 }
 
 /*----------------------< 992px ------------------------*/
@@ -1628,24 +1611,12 @@ body{
 			}
 		}
 	}
-
-		//Order
-		.order{
-			padding-left: 20px;
-			padding-right: 20px;
-			&__wrapper{
-				flex-direction: column;
-				.title{
-					margin-bottom: 50px;
-				}  
-				.content{
-					width: 100%;
-					padding-right: 0;
-					margin-right: 0;
-				}      
-			}
-			
+	//order
+	.order{
+		&__title{
+			padding-bottom: 50px;
 		}
+	}
 		}
 
 		
@@ -1797,10 +1768,6 @@ body{
 
 /*----------------------< 450px ------------------------*/
 @media only screen and (max-width: 450px){
-	section{
-		margin-left: 10px;
-		margin-right: 10px;
-	}
 	.select_team{
 		&__img{
 			&__lable{
@@ -1853,9 +1820,6 @@ body{
 		padding: 5px !important;
 	}
 }
-	.order{
-		padding: 0;
-	}
 }
 
 
