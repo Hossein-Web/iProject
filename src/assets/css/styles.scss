@@ -93,8 +93,7 @@ body{
 	font-weight: 400; 
 	text-align: right; 
 	color: $text_color;   
-	line-height: 35px; 
-  font-size: 18px;
+	font-size: 18px;
 	background-color: $background_color; 
 }
 i{
@@ -105,23 +104,22 @@ i{
 	text-align: center;
 	}
 
-.title{
-	h4{
-		font-size: 24px !important;
-		font-weight: 700 !important;
-		margin-bottom: 15px;
-		span{
-			font-size: 24px !important;
-			font-weight: 700 !important;
-		}
-	}
-		span{
-			color: #7a7a7a;
-			font-size: 18px;
-			font-weight: 400;
-			line-height: 35px;
-		}
-	}
+// .title{
+// 	h4{
+// 		font-size: 24px !important;
+// 		font-weight: 700 !important;
+// 		span{
+// 			font-size: 24px !important;
+// 			font-weight: 700 !important;
+// 		}
+// 	}
+// 		span{
+// 			color: #7a7a7a;
+// 			font-size: 18px;
+// 			font-weight: 400;
+// 			line-height: 35px;
+// 		}
+// 	}
 
 .img-fluid{
 	max-width:100%;
@@ -189,12 +187,36 @@ i{
 
 /*--------------------------------- Your position -------------------------------------*/
 .your_position{
-	position: relative;
 	background-image: url('../img/your_position_back_1.png');
 	background-position-y: center;
 	background-position-x: 100%;
 	background-repeat: no-repeat;
-	&__image_container{
+	.outer_text_wrapper{
+		display: none;
+	}
+	.text{
+		color: $text_color;
+		margin-bottom: 63px;
+		.title{
+			h4{
+				color: $accent_color;
+				font-size: 24px;
+				font-weight: 700;
+				span{
+					color: $text_color;
+					font-size: 24px;
+					font-weight: 700;
+				}
+			}
+			margin-bottom: 22px;
+		}
+		p{
+			line-height: 35px;
+			text-align: justify;
+		}
+	}
+	&__content_wrapper{
+		position: relative;
 		max-width: 1904px;
 		margin-left: auto;
 		margin-right: auto;
@@ -203,17 +225,12 @@ i{
 			left: -14%;
 		}
 	}
-	&__wrapper{
+	&__container{
 		position: absolute;
 		top: 50%;
 		transform: translateY( -50% );
 		left: 0;
-		right: 15%;
-			.content{
-				// position: absolute;
-				// top: 25%;
-				// right: 28%;
-				// left: 0;
+		right: 27.3%;
 				.swiper-slide{
 				   cursor: pointer;
 				}
@@ -232,7 +249,7 @@ i{
 				}
 				
 				.categories_title_list{
-					margin-bottom: 35px;
+					margin-bottom: 38px;
 					.swiper-slide{
 						margin-left: 0;
 						margin-right: 0;
@@ -241,15 +258,16 @@ i{
 							text-align: center;
 							span{
 								font-weight: 700;
-								line-height: 90.61px;
 								color: $text_color;
-								padding: 18px 20px;
+								display: inline-block;
+								padding: 10px 15px 12px 15px;
 								border: 1px solid #f0f1f7;
 								border-radius: 30px;
 							}
 							div{
 								color: $text_color;
 								font-weight: 300;
+								margin-top: 7px;
 							}
 						}
 					}
@@ -274,22 +292,30 @@ i{
 					.slide_content{
 						color: $text_color;
 						position: relative;
-						padding-right: 30px;
-						padding-top: 14px;
+						padding-right: 38px;
+						padding-top: 21px;
 						span{
 							display: none;
 							position: absolute;
 							color: #c7c7c7;
 							z-index: -1;
-							right: 0;
-							top: 9px;
-							font-size: 33px;
 							font-weight: 300;
-							line-height: 33px;
+							right: 0;
+							top: 4px;
+							font-weight: 300;
+							font-size: 50px;
+							line-height: 50px;
 						}
 						h4{
 							margin-bottom: 19px;
 							background-color: white;
+							font-weight: bold;
+						}
+						p{
+							font-size: 14px;
+							font-weight: bold;
+							text-align: justify;
+							line-height: 27px;	
 						}
 						opacity: 0.5;
 					}
@@ -310,25 +336,6 @@ i{
 					margin-left: auto;
 					margin-right: auto;
 				  }
-			}
-			.text{
-				color: $text_color;
-				margin-bottom: 50px;
-				.title{
-					h4{
-						color: $accent_color;
-						span{
-							color: $text_color;
-						}
-					}
-				}
-			}
-		// overflow: hidden;
-		// img{
-		// 	position: relative;
-		// 	left: -15%;
-		//   }
-
 		}
   
   }
@@ -1019,51 +1026,6 @@ border-radius: 5px;
 	}
 	}
 
-	/*---------------------- < 1800px ------------------------*/
-	@media only screen and (max-width: 1800px){
-		.your_position{
-			.content_wrapper{
-				top: 20%;
-			}
-			.text{
-				margin-bottom: 10px;
-				p{
-					padding-left: 20px;
-					font-size: 16px;
-				}
-			}
-			.categories_title_list{
-				margin-bottom: 0 !important; 
-				.slide_info{
-					font-size: 16px !important;
-					span{
-						padding: 15px 17px !important;
-					}
-				}	
-			}
-			.categories_description_list{
-				.slide_content{
-					padding-right: 20px !important;
-					span{
-						top: -9px !important;
-						right: 2px !important;
-						top: 6px !important;
-						font-size: 24px !important;
-						font-weight: 300 !important;
-						line-height: 24px !important;
-					}
-					h4{
-						font-size: 17px !important;
-						font-weight: 700;
-					}
-					p{
-						font-size: 16px !important;
-					}
-				}
-			}
-		}
-		}
-
 	//---------------------- > 1200px and < 1600px ---------------------- 
 @media only screen and( max-width: 1600px) and (min-width: 1200px ){
 	//Select_team Section
@@ -1079,13 +1041,16 @@ border-radius: 5px;
 	}
 
 /*---------------------- < 1500px ------------------------*/
-// @media only screen and (max-width: 1500px){
-// 	.your_position{
-// 		.content_wrapper{
-// 			top: 17%;
-// 		}
-// 	}
-// }
+@media only screen and (max-width: 1500px){
+	.your_position{
+		.outer_text_wrapper{
+			display: block;
+		}
+		.inner_text_wrapper{
+			display: none;
+		}
+}
+}
 
 /*----------------------< 1200px ------------------------*/
 @media only screen and (max-width: 1200px){
@@ -1106,17 +1071,8 @@ border-radius: 5px;
 	}
 
 	.your_position{
-		.content_wrapper{
-			top: 17%;
-		}
-		.text{
-			margin-bottom: 10px;
-			p{
-				padding-left: 20px;
-			}
-		}
 		.categories_title_list{
-			margin-bottom: 10px; 	
+			margin-bottom: 10px !important; 	
 		}
 	}
 	//Select team
@@ -1131,13 +1087,20 @@ border-radius: 5px;
 /*----------------------< 992px ------------------------*/
 @media only screen and (max-width: 992px){
 	.your_position{
+		.outer_text_wrapper{
+			display: none;
+		}
+		.inner_text_wrapper{
+			display: block;
+		}
 		background-image: unset;
 		padding: 0 20px;
 		.background{
 			display: none;
 		}
-		.content_wrapper{
+		&__container{
 			position: static;
+			transform: none;
 		}
 	}
 	.categories_title_list{
