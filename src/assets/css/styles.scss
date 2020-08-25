@@ -206,26 +206,39 @@ body{
 //------------- Design effect section -------------
 .design_effect{
 	margin-bottom: 113px;
-	&__wrapper{
-		display: flex;
-		.img{
-			flex: 0 0 auto;
+	background-image: url( '../img/dots_background.png' );
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: contain;
+	&__img{
+		position: relative;
+		padding-right: 8px;
+		&::before{
+			content: "";
+			position: absolute;
+			right: -270px;
+			bottom: -21px;
+			background: rgba( 0, 0, 0, 0.5 );
+			transform: rotate(-5deg) skew(60deg);
+			filter: blur(40px);
+			z-index: -1;
+			height: 5%;
+			width: 90%;
 		}
+	}
+	&__wrapper{
 		.content{
 			font-size: 18px;
 			line-height: 35px;
-			padding-right: 47px;
-			padding-bottom: 36px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
+			text-align: justify;
+			padding-top: 90px;
 		.title{
 			margin-bottom: 10px;
 			h4{
 				font-size: 24px ;
 				font-weight: 700;          
 				color: $accent_color;
-				margin-bottom: 10px;
+				margin-bottom: 6px;
 			}
 		}
 		}
@@ -1475,14 +1488,6 @@ body{
 
 /*---------------------- < 1500px ------------------------*/
 @media only screen and (max-width: 1500px){
-		//Design_effect Section
-		.design_effect{
-			&__wrapper{
-				.img{
-					flex: 0 0 50%;
-				}
-			}
-	}
 }
 
 /*----------------------< 1200px ------------------------*/
@@ -1551,15 +1556,6 @@ body{
 
 /*----------------------< 992px ------------------------*/
 @media only screen and (max-width: 992px){
-//Design_effect Section
-			.design_effect{
-				&__wrapper{
-					flex-direction: column;
-					.content{
-						padding-right: 20px;
-					}
-				}
-		}
 	.your_position{
 		background-image: unset;
 		padding: 0 20px;
