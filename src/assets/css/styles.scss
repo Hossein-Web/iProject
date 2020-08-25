@@ -646,7 +646,6 @@ body{
         }
         
     .swiper-container {
-        // width: 100%;
         margin-bottom: 70px;
       }
       .swiper-slide {
@@ -659,12 +658,12 @@ body{
         -webkit-box-align: center;
         -ms-flex-align: center;
 		align-items: center;
+		padding: 0 15px;
         &.swiper-slide-active{
             opacity: 1;
             box-shadow: 0 15px 70px rgba(56, 66, 77, 0.04);
             border-radius: 0 8px 0 0;
 			background-color: white;
-			padding: 0 15px;
         }
       }
 
@@ -677,7 +676,7 @@ body{
                 display: inline-block;
                 color: white;
                 background-color: #2ec5c0;
-                padding: 21px 55px;
+                padding: 21px 55px 26px;
 				border-radius: 4px;
 				box-shadow: 0 15px 70px rgba(46, 197, 192, 0.3);
             }
@@ -1834,7 +1833,7 @@ body{
 		}
 		.view_more{
 			a{
-				padding: 10px 5px;
+				padding: 10px 5px 13px;
 			}
 		}
 	}

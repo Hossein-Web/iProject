@@ -109,7 +109,7 @@ var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 			spaceBetween: 35
 		  },
 		  320: {
-			slidesPerView: 1,
+			slidesPerView: 1.5,
 			spaceBetween: 35
 		  },		
 	  }
