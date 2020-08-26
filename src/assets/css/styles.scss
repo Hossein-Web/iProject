@@ -360,8 +360,7 @@ i{
     margin-bottom: 300px;
     &__img{
 		position: absolute;
-		right: -19%;
-		transform: translateX(19% );
+		transform: translateX(55% );
         &__lable{
             display: flex;
             position: absolute;
@@ -1479,7 +1478,6 @@ i{
     .select_team{
         &__img{
 			position: relative;
-			right: 0;
 			transform: translateX(0);
 		}
 		&__content{
@@ -1561,8 +1559,15 @@ i{
 	//Select_team Section
 	.select_team{
 		&__img__lable{
-			.content{
-		  margin-left: 50px;
+			left: 0;
+			bottom: 20px;
+			.icon{
+				margin-right: 5px;
+			}
+			.lable{
+				padding-right: 10px;
+				margin-left: 80px;
+				font-size: 18px;
 		}
 	  }
 	}
@@ -1699,17 +1704,6 @@ i{
 	section{
 		margin-left: 10px;
 		margin-right: 10px;
-	}
-	.select_team{
-		&__img{
-			&__lable{
-				bottom: 0;
-				.lable{
-					margin-left: 20px;
-					font-size: 18px;
-				}
-			}
-		}
 	}
 	.services_card{
 		&__wrapper{
