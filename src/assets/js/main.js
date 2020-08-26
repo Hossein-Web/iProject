@@ -29,13 +29,16 @@ $( '.web_design_sec__go_bottom' ).on( 'click', function(e) {
 // 'your position' section sliders
 var categories_title_list = new Swiper('.categories_title_list', {
 	spaceBetween: 5,
-	slidesPerView: 1.5,
+	slidesPerView: 2.5,
 	loop: true,
 	autoHeight: true,
 	loopedSlides: 5,
 	watchSlidesVisibility: true,
 	watchSlidesProgress: true,
 	breakpoints: {
+		400: {
+			slidesPerView: 3,
+		},
 		576: {
 			slidesPerView: 4,
 		},
@@ -64,7 +67,7 @@ var categories_description_list = new Swiper('.categories_description_list', {
 	},
 	breakpoints: {
 		992: {
-			slidesPerView: 2.5,
+			slidesPerView: 3,
 		},
 		1700: {
 		slidesPerView: 3.5,
