@@ -1362,16 +1362,6 @@ body{
 //------------- Order -------------
 .order{
     margin-bottom: 100px;
-          &__title{
-              h4{
-                  font-size: 24px;
-                  font-weight: 700;
-                  margin-bottom: 10px;
-                  span{
-                      color: $accent_color;
-                  }
-              }
-          }
           &__content{
 			padding-right: 100px;
 			position: relative;
@@ -1628,7 +1618,7 @@ body{
 	}
 	//order
 	.order{
-		&__title{
+		.title{
 			padding-bottom: 50px;
 		}
 	}
