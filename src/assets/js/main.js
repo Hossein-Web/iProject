@@ -19,6 +19,13 @@ $(window).on('load', () => {
 	AOS.init();
 });
 
+// 'web_design_sec' go bottom function
+$( '.web_design_sec__go_bottom' ).on( 'click', function(e) {
+	e.preventDefault();
+	var dest = $( '.design_effect' );
+	$('html, body').animate({scrollTop: dest.offset().top}, '300');
+} );
+
 // 'your position' section sliders
 var categories_title_list = new Swiper('.categories_title_list', {
 	spaceBetween: 5,
