@@ -1385,7 +1385,22 @@ i{
               }
           }
           &__content{
-			box-shadow: 41px 0px 13px -14px rgba(179, 179, 179, 0.1);
+			padding-right: 100px;
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				right: -100px;
+				width: 100px;
+				height: 100%;
+				box-shadow: 90px 0px 41px -11px  #f1f1f1;
+				transform: rotate(180deg);
+				left: 0;
+				bottom: 0;
+				z-index: -6;
+			}
               ul{
                   li{
                       display: flex;
@@ -1795,6 +1810,15 @@ i{
 .services{
 	.read_more{
 		padding: 5px !important;
+	}
+}
+//order
+.order{
+	&__content{
+		padding-right: 0;
+		&::after{
+			display: none;
+		}
 	}
 }
 }
