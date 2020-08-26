@@ -19,34 +19,38 @@ $(window).on('load', () => {
 	AOS.init();
 });
 
+// 'web_design_sec' go bottom function
+$( '.web_design_sec__go_bottom' ).on( 'click', function(e) {
+	e.preventDefault();
+	var dest = $( '.design_effect' );
+	$('html, body').animate({scrollTop: dest.offset().top}, '300');
+} );
+
 // 'your position' section sliders
 var categories_title_list = new Swiper('.categories_title_list', {
 	spaceBetween: 5,
-	slidesPerView: 2,
+	slidesPerView: 2.5,
 	loop: true,
 	autoHeight: true,
 	loopedSlides: 5,
 	watchSlidesVisibility: true,
 	watchSlidesProgress: true,
 	breakpoints: {
-		576: {
-		slidesPerView: 3,
-		spaceBetween: 10
-		},
-		992: {
-			slidesPerView: 2,
-			spaceBetween: 10
-		},
-		1200: {
+		400: {
 			slidesPerView: 3,
-			spaceBetween: 10
 		},
-		1700: {
+		576: {
+			slidesPerView: 4,
+		},
+		768: {
 			slidesPerView: 5,
+		},
+		1500: {
+			slidesPerView: 6,
 			spaceBetween: 10
 		  },
 		1918: {
-		  slidesPerView: 7,
+		  slidesPerView: 9,
 		  spaceBetween: 10
 		}
 	  }
@@ -56,31 +60,20 @@ var categories_description_list = new Swiper('.categories_description_list', {
 	spaceBetween: 10,
 	loop: true,
 	loopedSlides: 5,
-	slidesPerView: 1,
+	slidesPerView: 1.5,
 	thumbs: {
 	  swiper: categories_title_list,
 		multipleActiveThumbs: false
 	},
 	breakpoints: {
-		576: {
-		  slidesPerView: 1,
-		  spaceBetween: 10
-		},
 		992: {
-		  slidesPerView: 1,
-		  spaceBetween: 10
-		},
-		1500: {
 			slidesPerView: 3,
-			spaceBetween: 10
-		  },
+		},
 		1700: {
-		slidesPerView: 3,
-		spaceBetween: 10
+		slidesPerView: 3.5,
 		},
 		1918: {
-		  slidesPerView: 4,
-		  spaceBetween: 10
+		  slidesPerView: 3.5,
 		}
 	  }
   });
@@ -109,7 +102,7 @@ var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 			spaceBetween: 35
 		  },
 		  320: {
-			slidesPerView: 1,
+			slidesPerView: 1.5,
 			spaceBetween: 35
 		  },		
 	  }
@@ -125,15 +118,15 @@ var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 	},
 	breakpoints: {
 		768: {
-		  slidesPerView: 4,
+		  slidesPerView: 6,
 		  spaceBetween: 13
 		},
 		576: {
-			slidesPerView: 3,
+			slidesPerView: 4,
 			spaceBetween: 13
 		  },
 		  320: {
-			slidesPerView: 2,
+			slidesPerView: 3,
 			spaceBetween: 13
 		  },		
 	  }
@@ -238,13 +231,14 @@ var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 	wavesurfer.on('ready', function () {
 		$( '.duration' ).html( formatTime( wavesurfer.getDuration() ) );
 		$( '.podcast_button' ).on( 'click', function(){
-			if( $( this ).hasClass( 'paused' ) ) {
-				$(this).removeClass( 'paused' );
-				$(this).addClass( 'playing' );
+			var icon_element = $( this ).find('span');
+			if( icon_element.hasClass('icon-play') ) {
+				icon_element.removeClass( 'icon-play' );
+				icon_element.addClass( 'icon-pause' );
 				wavesurfer.play();
 			}else{
-				$(this).removeClass( 'playing' );
-				$(this).addClass( 'paused' );
+				icon_element.removeClass( 'icon-pause' );
+				icon_element.addClass( 'icon-play' );
 				wavesurfer.pause();
 			}
 		} );
@@ -255,6 +249,5 @@ var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 		progress_percent = wavesurfer.getCurrentTime()*100/wavesurfer.getDuration();
 		$( '.current_time' ).html( formatTime( wavesurfer.getCurrentTime() ) );
 		setProgress( progress_percent );
-		console.log( progress_percent );
 	} );
 	
