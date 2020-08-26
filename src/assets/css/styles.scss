@@ -414,14 +414,16 @@ i{
   //------------- Select team section -------------
 .select_team{
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 300px;
     &__img{
-		position: relative;
+		position: absolute;
+		right: -19%;
+		transform: translateX(19% );
         &__lable{
             display: flex;
             position: absolute;
             bottom: 80px;
-            left: 190px;
+            left: 67px;
             border-radius: 52px ;
             background-color: white;
             box-shadow: 0 0 81px rgba(56, 66, 77, 0.08);
@@ -432,8 +434,8 @@ i{
                 flex: 0 0 auto;
                 background-color: $accent_color;
                 border-radius: 50%;
-                padding: 32px;
-				margin-right: 19px;
+                padding: 37px;
+                margin-right: 19px;
 				span{
 					color: white;
 					font-size: 43px;
@@ -459,7 +461,6 @@ i{
 	font-size: 18px;
 	text-align: justify;
 	padding-top: 160px;
-	padding-right: 20px;  
 .title{
     margin-bottom: 16px;
     h4{
@@ -1464,24 +1465,11 @@ i{
 			margin-bottom: 10px !important; 	
 		}
 	}
-	//faq
 	// .faq{
 	// 	&__background{
 	// 		top: 100px;
 	// 	}
 	// }
-	//Select team
-	.select_team{
-		&__img{
-			&__lable{
-				left: 0;
-			}
-		}
-		&__content{
-			padding-top: 50px;
-			margin-right: 0;
-		}
-		}
 //Portal
 		.portal__wrapper{
 			flex-direction: column;
@@ -1524,9 +1512,14 @@ i{
 	}
 //Select_team Section
     .select_team{
-        &__content{
-            padding-right: 20px;
-               }
+        &__img{
+			position: relative;
+			right: 0;
+			transform: translateX(0);
+		}
+		&__content{
+			padding-top: 50px;
+		}
 	}
 //Services Section
 .services{
@@ -1603,20 +1596,10 @@ i{
 @media only screen and( max-width: 576px ){
 	//Select_team Section
 	.select_team{
-		padding-left: 0;
 		&__img__lable{
-			height: 70px;
-			.icon{
-				height: 60px;
-				width: 60px;
-				padding: 25px;
-			}
 			.content{
 		  margin-left: 50px;
 		}
-	  }
-	  &__content{
-		  padding-right:0 ;
 	  }
 	}
 //Services Section
