@@ -102,19 +102,35 @@ body{
 	font-size: 18px;
 	background-color: $background_color; 
 }
-i{
-	width: 10px;
-	height: 10px;
-	display: block;
-	background-color: white;
-	text-align: center;
+.title{
+	margin-bottom: 21px;
+	&--red{
+		h4{
+			color: $accent_color !important;
+		}
 	}
-
-.img-fluid{
-	max-width:100%;
-	height:auto
+	&--white{
+		h4{
+			color: white !important;
+		}
+	}
+	h4{
+		color: $text_color;
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 12px;
+		span{
+			font-size: 24px;
+			font-weight: 700;
+			color: $accent_color;
+		}
+	}
+	p{
+		font-size: 18px;
+		font-weight: 400;
+		color: $text_color;
+	}
 }
-
 .swiper-pagination .swiper-pagination-bullet-active{
 	background-color: $accent_color;
 	padding-left: 8px;
@@ -146,13 +162,7 @@ i{
 	&__text{
 		color: $text_color;
 		.title{
-			h4{
-				color: $accent_color;
-				margin-top: 30px;
-			}
-			span{
-				color: $text_color;
-			}
+			margin-top: 30px;
 		}
 	}
 	&__go_bottom{
@@ -228,19 +238,15 @@ i{
 	}
 	&__wrapper{
 		.content{
-			font-size: 18px;
-			line-height: 35px;
-			text-align: justify;
-			padding-top: 90px;
-		.title{
-			margin-bottom: 10px;
-			h4{
-				font-size: 24px ;
-				font-weight: 700;          
-				color: $accent_color;
-				margin-bottom: 6px;
+			&>p{
+				font-size: 18px;
+				line-height: 35px;
+				text-align: justify;
 			}
-		}
+			padding-top: 90px;
+			.title{
+				margin-bottom: 16px;
+			}
 		}
 	}
 }
@@ -258,19 +264,9 @@ i{
 		color: $text_color;
 		margin-bottom: 63px;
 		.title{
-			h4{
-				color: $accent_color;
-				font-size: 24px;
-				font-weight: 700;
-				span{
-					color: $text_color;
-					font-size: 24px;
-					font-weight: 700;
-				}
-			}
-			margin-bottom: 22px;
+			margin-bottom: 16px;
 		}
-		p{
+		&>p{
 			line-height: 35px;
 			text-align: justify;
 		}
@@ -462,17 +458,9 @@ i{
 	font-size: 18px;
 	text-align: justify;
 	padding-top: 160px;
-.title{
-    margin-bottom: 16px;
-    h4{
-        font-size: 24px ;
-        font-weight: 700;          
-        margin-bottom: 15px;
-        span{
-            color: $accent_color;
-        }
-    }
-}
+	&>p{
+		line-height: 35px;
+	}
 }
 }
 
@@ -495,19 +483,8 @@ i{
 		padding-left: 96px;
 		padding-top: 486px;
 		padding-bottom: 518px;
-		.title{
-			font-size: 24px;
-			margin-bottom: 35px;
-			h4{
-				margin-bottom: 15px;
-				font-weight: 700;
-				span{
-					color: $accent_color;
-				}
-			} 
-			p{
-				font-size: 18px;
-			}     
+		&>p{
+			line-height: 35px;
 		}
 	}
 	&__list{
@@ -562,18 +539,10 @@ i{
 .ivahid_difference{
     margin-bottom: 240px;
     &__content{
-        padding-right: 45px;
-        .title{
-            margin-bottom: 35px;
-            h4{
-                font-weight: 700;
-                font-size: 24px;
-                margin-bottom: 10px;
-                span{
-                    color: $accent_color;
-                }
-            }
-        }
+		padding-right: 45px;
+		&>p{
+			line-height: 35px;
+		}
     }
     
 }
@@ -708,7 +677,6 @@ i{
 
 /*--------------------------------- Faq -------------------------------------*/
 .faq{
-	// padding: 232px 0;
 	padding-top: 107px;
 	padding-bottom: 300px;
 	margin-bottom: 109px;
@@ -741,21 +709,9 @@ i{
 		background-size: contain;
 		background-position: center center;
 	}
-	  .title{
-		  color: $text_color;
-		  margin-bottom: 105px;
-		  h4{
-			font-size: 24px;
-			font-weight: 400;
-			line-height: 35px;
-			margin-bottom: 15px;
-		  }
-		  span{
-			font-size: 18px;
-			font-weight: 400;
-			line-height: 35px;
-		}
-	  }
+	.title{
+		margin-bottom: 107px;
+	}
 	&__collapsible {
 		position: relative;
 		z-index: 1;
@@ -1101,28 +1057,7 @@ i{
 .services_card{
 	margin-bottom: 162px;
 	.title{
-		margin-bottom: 56px;
-		h4{
-			font-size: 24px;
-			font-weight: 700;
-			line-height: 35px;
-			color: $accent_color;
-			
-			span{
-				color: $text_color;
-				font-weight: 700;
-				font-size: 24px;
-				line-height: 35px;
-			}
-		}
-		span{
-			color: $text_color;
-			font-size: 18px;
-			font-weight: 400;
-			line-height: 35px;
-		}
-
-		
+		margin-bottom: 63px;
 	}
 
 	&__wrapper{
@@ -1328,12 +1263,8 @@ i{
             position: relative;
 			color: white;
 			text-align: justify;
-            .title{          
-                h4{
-                    font-size: 24px;
-                    font-weight: 700;
-                    margin-bottom: 40px;
-                }           
+            .title{  
+				margin-bottom: 40px;                  
             }
             p{
                 font-size: 20px;
@@ -1375,16 +1306,6 @@ i{
 //------------- Order -------------
 .order{
     margin-bottom: 100px;
-          &__title{
-              h4{
-                  font-size: 24px;
-                  font-weight: 700;
-                  margin-bottom: 10px;
-                  span{
-                      color: $accent_color;
-                  }
-              }
-          }
           &__content{
 			box-shadow: 41px 0px 13px -14px rgba(179, 179, 179, 0.1);
               ul{
@@ -1602,7 +1523,7 @@ i{
 	}
 	//order
 	.order{
-		&__title{
+		.title{
 			padding-bottom: 50px;
 		}
 	}
