@@ -414,8 +414,7 @@ body{
     margin-bottom: 300px;
     &__img{
 		position: absolute;
-		right: -19%;
-		transform: translateX(19% );
+		transform: translateX(55% );
         &__lable{
             display: flex;
             position: absolute;
@@ -1307,7 +1306,22 @@ body{
 .order{
     margin-bottom: 100px;
           &__content{
-			box-shadow: 41px 0px 13px -14px rgba(179, 179, 179, 0.1);
+			padding-right: 100px;
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				right: -100px;
+				width: 100px;
+				height: 100%;
+				box-shadow: 90px 0px 41px -11px  #f1f1f1;
+				transform: rotate(180deg);
+				left: 0;
+				bottom: 0;
+				z-index: -6;
+			}
               ul{
                   li{
                       display: flex;
@@ -1452,7 +1466,6 @@ body{
     .select_team{
         &__img{
 			position: relative;
-			right: 0;
 			transform: translateX(0);
 		}
 		&__content{
@@ -1535,8 +1548,15 @@ body{
 	//Select_team Section
 	.select_team{
 		&__img__lable{
-			.content{
-		  margin-left: 50px;
+			left: 0;
+			bottom: 20px;
+			.icon{
+				margin-right: 5px;
+			}
+			.lable{
+				padding-right: 10px;
+				margin-left: 80px;
+				font-size: 18px;
 		}
 	  }
 	}
@@ -1668,16 +1688,9 @@ body{
 
 /*----------------------< 450px ------------------------*/
 @media only screen and (max-width: 450px){
-	.select_team{
-		&__img{
-			&__lable{
-				bottom: 0;
-				.lable{
-					margin-left: 20px;
-					font-size: 18px;
-				}
-			}
-		}
+	section{
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 
 	.your_position{
@@ -1718,6 +1731,15 @@ body{
 .services{
 	.read_more{
 		padding: 5px !important;
+	}
+}
+//order
+.order{
+	&__content{
+		padding-right: 0;
+		&::after{
+			display: none;
+		}
 	}
 }
 }
