@@ -19,34 +19,38 @@ $(window).on('load', () => {
 	AOS.init();
 });
 
+// 'web_design_sec' go bottom function
+$( '.web_design_sec__go_bottom' ).on( 'click', function(e) {
+	e.preventDefault();
+	var dest = $( '.design_effect' );
+	$('html, body').animate({scrollTop: dest.offset().top}, '300');
+} );
+
 // 'your position' section sliders
 var categories_title_list = new Swiper('.categories_title_list', {
 	spaceBetween: 5,
-	slidesPerView: 2,
+	slidesPerView: 2.5,
 	loop: true,
 	autoHeight: true,
 	loopedSlides: 5,
 	watchSlidesVisibility: true,
 	watchSlidesProgress: true,
 	breakpoints: {
-		576: {
-		slidesPerView: 3,
-		spaceBetween: 10
-		},
-		992: {
-			slidesPerView: 2,
-			spaceBetween: 10
-		},
-		1200: {
+		400: {
 			slidesPerView: 3,
-			spaceBetween: 10
 		},
-		1700: {
+		576: {
+			slidesPerView: 4,
+		},
+		768: {
 			slidesPerView: 5,
+		},
+		1500: {
+			slidesPerView: 6,
 			spaceBetween: 10
 		  },
 		1918: {
-		  slidesPerView: 7,
+		  slidesPerView: 9,
 		  spaceBetween: 10
 		}
 	  }
@@ -56,31 +60,20 @@ var categories_description_list = new Swiper('.categories_description_list', {
 	spaceBetween: 10,
 	loop: true,
 	loopedSlides: 5,
-	slidesPerView: 1,
+	slidesPerView: 1.5,
 	thumbs: {
 	  swiper: categories_title_list,
 		multipleActiveThumbs: false
 	},
 	breakpoints: {
-		576: {
-		  slidesPerView: 1,
-		  spaceBetween: 10
-		},
 		992: {
-		  slidesPerView: 1,
-		  spaceBetween: 10
-		},
-		1500: {
 			slidesPerView: 3,
-			spaceBetween: 10
-		  },
+		},
 		1700: {
-		slidesPerView: 4,
-		spaceBetween: 10
+		slidesPerView: 3.5,
 		},
 		1918: {
-		  slidesPerView: 4,
-		  spaceBetween: 10
+		  slidesPerView: 3.5,
 		}
 	  }
   });
