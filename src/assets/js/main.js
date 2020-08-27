@@ -60,12 +60,15 @@ var categories_description_list = new Swiper('.categories_description_list', {
 	spaceBetween: 10,
 	loop: true,
 	loopedSlides: 5,
-	slidesPerView: 1.5,
+	slidesPerView: 1,
 	thumbs: {
 	  swiper: categories_title_list,
 		multipleActiveThumbs: false
 	},
 	breakpoints: {
+		576: {
+			slidesPerView: 1.5,
+		},
 		992: {
 			slidesPerView: 3,
 		},
