@@ -80,15 +80,13 @@ var categories_description_list = new Swiper('.categories_description_list', {
 
   //portfolio swiper
 var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
-	slidesPerView: 1,
+	slidesPerView: 1.5,
 	spaceBetween: 35,
-	// autoHeight: true,
 	pagination: {
 	  el: '.swiper-pagination',
 	  clickable: true,
 	},
 	breakpoints: {
-		// when window width is >= 320px
 		1200: {
 			slidesPerView: 4,
 			spaceBetween: 35
@@ -100,16 +98,56 @@ var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 		576: {
 			slidesPerView: 2,
 			spaceBetween: 35
-		  },
-		  320: {
+		  }		
+	  }
+  });
+  
+// faq section
+  var coll = document.getElementsByClassName("faq__collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+	coll[i].addEventListener("click", function() {
+	  this.classList.toggle("active");
+	  var content = this.nextElementSibling;
+	  if (content.style.maxHeight){
+		content.style.maxHeight = null;
+	  } else {
+		content.style.maxHeight = content.scrollHeight + "px" ;
+	  } 
+	});
+  }
+  
+  // 'blog' section swiper slider
+  var blog__posts = new Swiper('.blog__wrapper > .swiper-container', {
+	spaceBetween: 32,
+	slidesPerView: 1,
+	loop: true,
+	loopedSlides: 5,
+	watchSlidesVisibility: true,
+	watchSlidesProgress: true,
+	pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+	breakpoints: {
+		576: {
 			slidesPerView: 1.5,
-			spaceBetween: 35
-		  },		
+			spaceBetween: 32
+		  },
+		  768: {
+			slidesPerView: 2.5,
+			spaceBetween: 32
+		  },
+		992: {
+		  slidesPerView: 3,
+		  spaceBetween: 32
+		}
 	  }
   });
 
 //customers swiper
-   var swiper = new Swiper('.customers__wrapper > .swiper-container', {
+var swiper = new Swiper('.customers__wrapper > .swiper-container', {
 	slidesPerView: 1,
 	spaceBetween: 35,
 	pagination: {
@@ -151,51 +189,6 @@ var swiper = new Swiper('.portfolio__wrapper > .swiper-container ', {
 		  },		
 	  }
   });
-  
-// faq section
-  var coll = document.getElementsByClassName("faq__collapsible");
-  var i;
-  
-  for (i = 0; i < coll.length; i++) {
-	coll[i].addEventListener("click", function() {
-	  this.classList.toggle("active");
-	  var content = this.nextElementSibling;
-	  if (content.style.maxHeight){
-		content.style.maxHeight = null;
-	  } else {
-		content.style.maxHeight = content.scrollHeight + "px" ;
-	  } 
-	});
-  }
-  
-  // 'blog' section swiper slider
-  var blog__posts = new Swiper('.blog__posts', {
-	spaceBetween: 32,
-	slidesPerView: 1,
-	loop: true,
-	loopedSlides: 5,
-	watchSlidesVisibility: true,
-	watchSlidesProgress: true,
-	pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-	breakpoints: {
-		576: {
-		  slidesPerView: 2,
-		  spaceBetween: 32
-		},
-		992: {
-		  slidesPerView: 3,
-		  spaceBetween: 32
-		},
-		1918: {
-		  slidesPerView: 4,
-		  spaceBetween: 32
-		}
-	  }
-  });
-
     // 'podcast' section audio player
 	var progress_percent = 0;
 	var formatTime = function (time) {

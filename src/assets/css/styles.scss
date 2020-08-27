@@ -104,16 +104,6 @@ body{
 }
 .title{
 	margin-bottom: 21px;
-	&--red{
-		h4{
-			color: $accent_color !important;
-		}
-	}
-	&--white{
-		h4{
-			color: white !important;
-		}
-	}
 	h4{
 		color: $text_color;
 		font-size: 24px;
@@ -130,13 +120,33 @@ body{
 		font-weight: 400;
 		color: $text_color;
 	}
+	&--red{
+		h4{
+			color: $accent_color !important;
+		}
+	}
+	&--white{
+		h4{
+			color: white !important;
+		}
+	}
 }
-.swiper-pagination .swiper-pagination-bullet-active{
-	background-color: $accent_color;
-	padding-left: 8px;
-	padding-right: 8px;
-	border-radius: 5px;
-	transition: 0.3s;
+.swiper-pagination{
+	top: 27px;
+	bottom: unset !important;
+	text-align: left;
+	position: absolute;
+	display: inline-block;
+	width: auto !important;
+	background-color: $background_color;
+	padding-right: 13px;
+	.swiper-pagination-bullet-active{
+		background-color: $accent_color;
+		padding-left: 8px;
+		padding-right: 8px;
+		border-radius: 5px;
+		transition: 0.3s;
+	}
 }
 /*--------------------------------- Web design sec -------------------------------------*/
 .web_design_sec{
@@ -216,7 +226,7 @@ body{
 	}
 }
 
-//------------- Design effect section -------------
+//------------- Design effect -------------
 .design_effect{
 	margin-bottom: 113px;
 	background-image: url( '../img/dots_background.png' );
@@ -411,7 +421,7 @@ body{
   
   }
 
-  //------------- Select team section -------------
+  //------------- Select team -------------
 .select_team{
     position: relative;
     margin-bottom: 300px;
@@ -525,7 +535,8 @@ body{
 				}
 				.read_more{
 					position: absolute;
-					bottom: -25px;
+					bottom: 0;
+					transform: translateY( 50% );
 					left: 30px;
 					padding: 9px 14px 9px 14px;
 					background-color: $text_color;
@@ -541,7 +552,7 @@ body{
 	}
 	}
 
-//------------- Ivahid_difference -------------
+//------------- Ivahid difference -------------
 .ivahid_difference{
     margin-bottom: 240px;
     &__content{
@@ -612,7 +623,8 @@ body{
         }
     }
     &__description{
-        margin-bottom: 65px;
+		margin-bottom: 65px;
+		text-align: justify;
         h4{
 			font-size: 24px;
 			font-weight: 400;
@@ -650,11 +662,7 @@ body{
         opacity: 0.5;
         text-align: center;
         display: flex;
-        // -webkit-box-pack: center;
-        // -ms-flex-pack: center;
         justify-content: center;
-        // -webkit-box-align: center;
-		// -ms-flex-align: center;
 		align-items: center;
 		padding: 0 15px;
 		transition: 0.3s;
@@ -762,9 +770,7 @@ body{
 	  }
 	  
 	  &__content {
-		  &:not(:last-child){  
-			margin-bottom: 32px;
-		  }
+		text-align: justify;
 		z-index: 1;
 		position: relative;
 		font-weight: 400;
@@ -775,6 +781,9 @@ body{
 		overflow: hidden;
 		max-height: 0;
 		transition: max-height 0.3s;
+		  &:not(:last-child){  
+			margin-bottom: 32px;
+		  }
 		p{
 		padding-bottom: 32px;
 		}
@@ -784,43 +793,33 @@ body{
 /*--------------------------------- Blog -------------------------------------*/
 .blog{
 	margin-bottom: 82px;
-	&__posts{
-		padding-bottom: 40px;
+	&__wrapper{
+		position: relative;
 		&::after{
             content: '';
             display: block;
             position: absolute;
             height: 2px;
             background-color: #f0f1f7 ;
-            top: 43px;
+            top: 41px;
             left: 0;
             right: 0;
 			width: 100%;
 			z-index: -1;
 		}
+		.swiper-container{
+			padding-bottom: 40px;
+		}
 		.title{
 			margin-bottom: 45px;
-			color: $text_color;
 			display: inline-block;
-			background-color: $background_color;
-        h4{
-			font-size: 24px;
-			font-weight: 400;
-            display: inline-block;
-            background-color: $background_color;
-            padding-bottom: 13px;
-			position: relative;
-			margin-bottom: 0;
-		}
-		span{
-			font-size: 18px;
-			font-weight: 400;
-		}
+			background-color: white;
 		}
 		.post_wrapper{
 			padding: 35px 30px 50px 30px;
 			box-shadow: 0 15px 70px rgba(56, 66, 77, 0.04);
 			background-color: white;
+			position: relative;
 			&:hover, &:focus{
 				.read_more_wrapper{
 					visibility: visible;
@@ -840,7 +839,7 @@ body{
 				font-weight: 700;
 				line-height: 35px;
 				color: $text_color;
-				text-align: right;
+				text-align: justify;
 				margin-bottom: 18px;
 				padding-bottom: 26px;
 				border-bottom: 1px solid #f0f1f7;
@@ -851,10 +850,15 @@ body{
 				line-height: 40px;
 				color: $text_color;
 				margin-bottom: 17px;
+				text-align: justify;
 			}
 			.read_more_wrapper{
 					text-align: left;
-					margin-bottom: -69px;
+					position: absolute;
+					left: 32px;
+					right: 0;
+					bottom: 0;
+					transform: translateY(50%);
 				a{
 					font-size: 18px;
 					font-weight: 700;
@@ -871,22 +875,11 @@ body{
 				opacity: 0;
 			}
 		}
-		.swiper-pagination{
-				top: 25px;
-				bottom: unset;
-				text-align: left;
-				position: absolute;
-				display: inline-block;
-				width: auto;
-				background-color: $background_color;
-				padding-right: 13px;
-		}
 	}
 }
 
 //------------- Customers -------------
 .customers{
-	// margin-bottom: 154px;
     margin-bottom: 134px;
     &__wrapper{
 		position: relative;
@@ -898,7 +891,7 @@ body{
             position: absolute;
             height: 2px;
             background-color: #f0f1f7 ;
-            top: 120px;
+            top: 114px;
             left: 0;
             right: 0;
             width: 100%;
@@ -909,33 +902,12 @@ body{
 		  align-items: center;
 		  height: auto;
         }
-    }
-    &__title{
-	  margin-bottom: 34px;
-	  background-color: $background_color;
-	  display: inline-block;
-        h4{
-			font-size: 30px;
-			line-height: 35px;
-			padding-bottom: 10px;
-			font-weight: 400;
-		}
-		p{
-			font-size: 24px;
-			line-height: 35px;
-			font-weight: 400;
-		}
-    }
-    .swiper-pagination{
-        top: 27px;
-        bottom: unset;
-        text-align: left;
-        position: absolute;
-        display: inline-block;
-        width: auto;
-        background-color: $background_color;
-        padding-right: 13px;
-    }
+	}
+	.title{
+		background-color: white;
+		display: inline-block;
+		margin-bottom: 40px;
+	}
 }
 
 //------------- Videos -------------
@@ -949,27 +921,16 @@ body{
             position: absolute;
             height: 2px;
             background-color: #f0f1f7 ;
-            top: 45px;
+            top: 42px;
             left: 0;
             right: 0;
             width: 100%;
         }
     }
-    &__title{
+    .title{
 		margin-bottom: 49px;
-		background-color: $background_color;
+		background-color: white;
 		display: inline-block;
-		h4{
-			font-size: 30px;
-			line-height: 35px;
-			padding-bottom: 10px;
-			font-weight: 400;
-		}
-		p{
-			font-size: 24px;
-			line-height: 35px;
-			font-weight: 400;
-		}
     }
     .item{
         text-align: center;
@@ -1044,16 +1005,6 @@ body{
             }
         }
     }
-    .swiper-pagination{
-        top: 27px;
-        bottom: unset;
-        text-align: left;
-        position: absolute;
-        display: inline-block;
-        width: auto;
-        background-color: $background_color;
-        padding-right: 13px;
-	}
 	&__background{
 		position: absolute;
 		bottom: -100px;
@@ -1222,7 +1173,7 @@ body{
 	}
 }
 
-/*--------------------------------- content encyclopedia -------------------------------------*/
+/*--------------------------------- Content encyclopedia -------------------------------------*/
 .content_encyclopedia{
 	margin-bottom: 321px;
 	&__item_wrapper{
@@ -1243,6 +1194,7 @@ body{
 		.item_description{
 			color: #333333;
 			font-weight: 400;
+			text-align: justify;
 		}
 		.wiki_link{
 			color: $accent_color;
@@ -1364,7 +1316,7 @@ body{
           }
   }
 
-  //media queries
+  //---------------------- Media queries ----------------------
 
   //---------------------- > 1918px ----------------------
   @media only screen and( min-width: 1919px ){
@@ -1383,16 +1335,17 @@ body{
 
   //---------------------- > 1200px ----------------------
 @media only screen and( min-width: 1200px ){
-			//Portal
-			.portal{
-				&__img{
-					transform: translate( 10%, -50% );
-				}
-			}
+	//Portal
+	.portal{
+		&__img{
+			transform: translate( 10%, -50% );
+		}
+	}
 	}
 
 /*---------------------- < 1500px ------------------------*/
 @media only screen and (max-width: 1500px){
+	//your_position
 	.your_position{
 		.outer_text_wrapper{
 			display: block;
@@ -1421,21 +1374,22 @@ body{
 			margin-bottom: 10px !important; 	
 		}
 	}
-//Portal
-		.portal__wrapper{
-			flex-direction: column;
-			align-items: center;
-			.img{
-				margin-bottom: 20px;
-			}
-			.content{
-				padding: 0;
-			}
+	//Portal
+	.portal__wrapper{
+		flex-direction: column;
+		align-items: center;
+		.img{
+			margin-bottom: 20px;
 		}
+		.content{
+			padding: 0;
+		}
+	}
 }
 
 /*----------------------< 992px ------------------------*/
 @media only screen and (max-width: 992px){
+	//your_position
 	.your_position{
 		.outer_text_wrapper{
 			display: none;
@@ -1461,7 +1415,7 @@ body{
 			}
 		}
 	}
-//Select_team Section
+	//Select_team
     .select_team{
         &__img{
 			position: relative;
@@ -1471,49 +1425,49 @@ body{
 			padding-top: 50px;
 		}
 	}
-//Services Section
-.services{
-    &__introduction{
-        padding: 0;
-        margin-bottom: 50px;
-    }
-    &__list{
-        margin: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-}
-
-.services_card{
-		&__wrapper{
-			.item{
-				height: auto;
-				margin-bottom: 20px;
-			}
+	//Services
+	.services{
+		&__introduction{
+			padding: 0;
+			margin-bottom: 50px;
 		}
+		&__list{
+			margin: 0;
+			padding-top: 0;
+			padding-bottom: 0;
 		}
-		//Portal
-		.portal{
-			&__img{
-				text-align: center;
-				position: relative;
-				top: auto;
-				transform: translate( 0%, 0% );
-				margin-bottom: 30px;
+	}
+	//Services_card
+	.services_card{
+			&__wrapper{
+				.item{
+					height: auto;
+					margin-bottom: 20px;
+				}
 			}
-			.content{
-				padding: 0;
 			}
+	//Portal
+	.portal{
+		&__img{
+			text-align: center;
+			position: relative;
+			top: auto;
+			transform: translate( 0%, 0% );
+			margin-bottom: 30px;
 		}
+		.content{
+			padding: 0;
+		}
+	}
 }
 
 //---------------------- < 768px ----------------------
 @media only screen and( max-width: 768px ){
-	//Select_team Section
+	//Select_team
 	.select_team__img__lable{
 		height: 80px;
 	}
-	//Ivahid_difference Section
+	//Ivahid_difference
 	.ivahid_difference{
 		&__img{
 			margin-bottom: 50px;
@@ -1544,7 +1498,30 @@ body{
 		
 //---------------------- < 576px ----------------------
 @media only screen and( max-width: 576px ){
-	//Select_team Section
+	.customers, .blog, .videos{
+		.title{
+			margin-bottom: 30px;
+			h4{
+				display: block;
+				background-color:unset;
+				padding-bottom: 12px;      
+			}
+		}
+		&__wrapper{
+			&::after{
+				display: none;
+			}
+		} 
+		.swiper-pagination{
+			text-align: left;
+			position: static;
+			margin-bottom: 30px;
+			display: block;
+			background-color: unset;
+			padding-right: unset;
+		}
+	}
+	//Select_team
 	.select_team{
 		&__img__lable{
 			left: 0;
@@ -1559,14 +1536,14 @@ body{
 		}
 	  }
 	}
-//Services Section
+//Services
 		.services{
 			&__list__item{
 				padding-right: 10px;
 				padding-left: 10px;
 			}
       }
-	//Ivahid_difference Section
+	//Ivahid_difference
 	.ivahid_difference{
 		padding-left: 20px;
 		padding-right: 20px;
@@ -1577,63 +1554,6 @@ body{
 		&::before, &::after{
 			display: none;
 		}
-	}
-	
-//Customers
-.customers{
-	padding-left: 20px;
-	padding-right: 20px;
-	&__wrapper{
-		&::after{
-			content: '';
-			display: none;
-		}
-	}  
-	&__title{
-		margin-bottom: 30px;
-		h4{
-			display: block;
-			background-color:unset;
-			padding-bottom: 12px;      
-		}
-	}
-	.swiper-pagination{
-		text-align: left;
-		position: static;
-		margin-bottom: 30px;
-		display: block;
-		background-color: unset;
-		padding-right: unset;
-	}
-}
-//Videos
-.videos{
-	padding-left: 20px;
-	padding-right: 20px;
-	&__wrapper{
-		&::after{
-			content: '';
-			display: none;
-		}
-	}  
-	&__title{
-		margin-bottom: 30px;
-		h4{
-			display: block;
-			background-color:unset;
-			padding-bottom: 12px;      
-		}
-	}
-	.swiper-pagination{
-		// top: 20px;
-		// bottom: unset;
-		text-align: left;
-		position: static;
-		margin-bottom: 30px;
-		display: block;
-		background-color: unset;
-		padding-right: unset;
-	}
 	}
 
 	.services_card{
@@ -1715,16 +1635,6 @@ body{
 		.view_more{
 			a{
 				padding: 10px 5px 13px;
-			}
-		}
-	}
-	.blog{
-		&__posts{
-			&::after{
-				display: none;
-			}
-			.swiper-pagination{
-				top: 75px;
 			}
 		}
 	}
