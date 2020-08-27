@@ -171,6 +171,7 @@ body{
 	}
 	&__text{
 		color: $text_color;
+		text-align: justify;
 		.title{
 			margin-top: 30px;
 		}
@@ -1498,6 +1499,7 @@ body{
 		
 //---------------------- < 576px ----------------------
 @media only screen and( max-width: 576px ){
+	//general
 	.customers, .blog, .videos{
 		.title{
 			margin-bottom: 30px;
@@ -1519,6 +1521,14 @@ body{
 			display: block;
 			background-color: unset;
 			padding-right: unset;
+		}
+	}
+	// your position
+	.your_position{
+		.categories_description_list, .categories_title_list{
+			&::before{
+				display: none;
+			}
 		}
 	}
 	//Select_team
@@ -1610,13 +1620,8 @@ body{
 /*----------------------< 450px ------------------------*/
 @media only screen and (max-width: 450px){
 	section{
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-
-	.your_position{
-		padding-left: 0;
-		padding-right: 0;
+		padding-left: 10px !important;
+		padding-right: 10px !important;
 	}
   
 	.services_card{
