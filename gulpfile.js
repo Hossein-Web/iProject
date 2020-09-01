@@ -97,7 +97,7 @@ function devServer() {
 	watch('./src/assets/fonts/**', series(copyFontsDev, Reload));
 	watch('./src/**/*.html', series(staticFilesDev, Reload));
 
-	watch('./src/assets/audio/*.mp3', series(copyMediaFilesDev, Reload));
+	watch('./src/assets/audio/*.*', series(copyMediaFilesDev, Reload));
 }
 
 function Reload(done) {
@@ -167,7 +167,7 @@ function staticFilesDev() {
 }
 
 function copyMediaFilesDev() {
-	return src('./src/assets/audio/*.mp3').pipe(dest('./build/assets/audio'));
+	return src('./src/assets/audio/*.*').pipe(dest('./build/assets/audio'));
 }
 
 exports.dev = series(

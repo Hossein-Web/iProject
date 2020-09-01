@@ -317,7 +317,7 @@ body{
 						height: 100%;
 						width: 20%;
 						background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.3) 100%);
-						box-shadow: 4px 0px 25px 4px rgba(255,255, 255,0.448);
+						box-shadow: 4px 0 25px 4px rgba(255,255, 255,0.448);
 						z-index: 1000;
 					}
 					margin-bottom: 38px;
@@ -369,7 +369,7 @@ body{
 						height: 100%;
 						width: 20%;
 						background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.3) 100%);
-						box-shadow: 4px 0px 25px 4px rgba(255,255, 255,0.448);
+						box-shadow: 4px 0 25px 4px rgba(255,255, 255,0.448);
 						z-index: 1000;
 					}
 					.slide_content{
@@ -385,7 +385,6 @@ body{
 							font-weight: 300;
 							right: 0;
 							top: 4px;
-							font-weight: 300;
 							font-size: 50px;
 							line-height: 50px;
 						}
@@ -493,7 +492,7 @@ body{
 		border-radius: 50%;
 	}
 	&__introduction{
-		padding-left: 96px;
+		padding-left: 30px;
 		padding-top: 486px;
 		padding-bottom: 518px;
 		&>p{
@@ -502,7 +501,7 @@ body{
 		}
 	}
 	&__list{
-		margin-right: 140px;
+		margin-right: 20px;
 		padding-top: 413px;
 		padding-bottom: 425px;
 		&__item{
@@ -638,7 +637,7 @@ body{
     }
     &__wrapper{
         &__item{
-			padding: 36px 0px 28px 0px;
+			padding: 36px 0 28px 0;
             img{
                 padding-bottom: 28px;
             }
@@ -725,9 +724,6 @@ body{
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: center center;
-	}
-	.title{
-		margin-bottom: 107px;
 	}
 	&__collapsible {
 		position: relative;
@@ -1028,6 +1024,7 @@ body{
 				justify-content: space-between;
 				box-shadow: 0 15px 70px rgba(56, 66, 77, 0.04);
 				margin: 0 48px;
+				border-radius: 5px;
 				height: 100%;
 				background-color: white;
 				transition: 0.3s;
@@ -1278,7 +1275,7 @@ body{
 				right: -100px;
 				width: 100px;
 				height: 100%;
-				box-shadow: 90px 0px 41px -11px  #f1f1f1;
+				box-shadow: 90px 0 41px -11px  #f1f1f1;
 				transform: rotate(180deg);
 				left: 0;
 				bottom: 0;
@@ -1614,6 +1611,15 @@ body{
 			}
 		}
 	}
+	//order
+.order{
+	&__content{
+		padding-right: 0;
+		&::after{
+			display: none;
+		}
+	}
+}
 	 
 		}
 
@@ -1647,15 +1653,6 @@ body{
 .services{
 	.read_more{
 		padding: 5px !important;
-	}
-}
-//order
-.order{
-	&__content{
-		padding-right: 0;
-		&::after{
-			display: none;
-		}
 	}
 }
 }
