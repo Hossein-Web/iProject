@@ -809,6 +809,12 @@ body{
 		}
 		.swiper-container{
 			padding-bottom: 40px;
+			.swiper-slide-active{
+				.read_more_wrapper{
+						visibility: visible;
+						opacity: 1;
+				}
+			}
 		}
 		.title{
 			margin-bottom: 45px;
@@ -1212,10 +1218,7 @@ body{
 		.wiki_link{
 			color: $accent_color;
 			transition: 0.1s;
-			font-weight: 400;
-			&:hover{
-				font-weight: 700;
-			}
+			font-weight: 700;
 		}
 	}
 }
