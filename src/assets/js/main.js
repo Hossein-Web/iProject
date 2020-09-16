@@ -25,6 +25,14 @@ $( '.web_design_sec__go_bottom' ).on( 'click', function(e) {
 	var dest = $( '.design_effect' );
 	$('html, body').animate({scrollTop: dest.offset().top}, '300');
 } );
+//portfolio swiper
+var web_design_sec_swiper = new Swiper('.web_design_sec_slider >.swiper-container ', {
+	autoplay: {
+		delay: 3000,
+	},
+	effect: 'fade',
+	loop: true
+});
 
 // 'your position' section sliders
 var categories_title_list = new Swiper('.categories_title_list', {
