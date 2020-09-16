@@ -166,7 +166,6 @@ body{
 	}
 	&__img_wrapper{
 		position: relative;
-		right: -30px;
 		text-align: center;
 	}
 	&__text{
@@ -1356,9 +1355,9 @@ body{
 @media only screen and (max-width: 1200px){
 	//web_design_sec Section
 	.web_design_sec{
-		&__img_wrapper{
-			right: 0;
-		}
+		//&__img_wrapper{
+		//	right: 0;
+		//}
 		&__text{
 		margin-bottom: 30px;
 		}
