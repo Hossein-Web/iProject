@@ -240,13 +240,13 @@ body{
 		&::before{
 			content: "";
 			position: absolute;
-			right: -270px;
-			bottom: -21px;
-			background: rgba( 0, 0, 0, 0.5 );
-			transform: rotate(-5deg) skew(60deg);
-			filter: blur(40px);
+			right: -250px;
+			bottom: -20px;
+			background: rgba(113, 108, 108, 0.4);
+			transform: rotate(-9deg) skew(75deg);
+			filter: blur(20px);
 			z-index: -1;
-			height: 5%;
+			height: 10%;
 			width: 90%;
 		}
 	}
@@ -492,7 +492,8 @@ body{
 		border-radius: 50%;
 	}
 	&__introduction{
-		padding-left: 30px;
+		//padding-left: 30px;
+		padding-left: 75px;
 		padding-top: 486px;
 		padding-bottom: 518px;
 		&>p{
@@ -664,7 +665,7 @@ body{
 		align-items: center;
 		padding: 0 15px;
 		transition: 0.3s;
-		&:hover{
+		&:hover , &.swiper-slide-active {
 			opacity: 1;
             box-shadow: 0 15px 70px rgba(56, 66, 77, 0.04);
             border-radius: 0 8px 0 0;
@@ -684,6 +685,10 @@ body{
                 padding: 21px 55px 26px;
 				border-radius: 4px;
 				box-shadow: 0 15px 70px rgba(46, 197, 192, 0.3);
+				transition: 0.3s;
+				&:hover{
+					box-shadow: none;
+				}
             }
       }
     }
@@ -809,6 +814,7 @@ body{
 			margin-bottom: 45px;
 			display: inline-block;
 			background-color: white;
+			padding-left: 20px;
 		}
 		.post_wrapper{
 			padding: 35px 30px 50px 30px;
@@ -902,6 +908,7 @@ body{
 		background-color: white;
 		display: inline-block;
 		margin-bottom: 40px;
+		padding-left: 20px;
 	}
 }
 
@@ -909,6 +916,15 @@ body{
 .videos{
 	margin-bottom: 119px;
 	position: relative;
+	&::before{
+		content: "";
+		position: absolute;
+		display: block;
+		width: 100%;
+		background-color: #f9f9f9;
+		top: 40%;
+		bottom: 0;
+	}
     &__wrapper{
         &::after{
             content: '';
@@ -926,6 +942,7 @@ body{
 		margin-bottom: 49px;
 		background-color: white;
 		display: inline-block;
+		padding-left: 20px;
     }
     .item{
         text-align: center;
@@ -1242,7 +1259,7 @@ body{
                         display: block;
                         position: absolute;
                         height: 3px;
-                        width: 0;
+                        width: 100%;
                         background-color: white;
                         bottom: -4px;
                         left: 0;
@@ -1251,7 +1268,7 @@ body{
 					}
 					&:hover{
 						&::after{
-							width: 100%;
+							width: 0;
 						}
 					}
                 }
